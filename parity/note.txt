@@ -1,0 +1,11 @@
+Interesting plot of Natural parity.
+
+The exponential nature of the powers of two (2^n) can be observed as the tallest lines in the plot appear increasingly further from each other.
+
+Useful feh keyboard controls:
+   S_-   Flip horizontal
+   C_arr Pan
+   up    Zoom in
+   down  Zoom out
+   q     Quit
+
