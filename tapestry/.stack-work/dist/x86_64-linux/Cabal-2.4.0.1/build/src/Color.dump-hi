@@ -1,0 +1,482 @@
+
+==================== FINAL INTERFACE ====================
+2019-04-23 11:00:15.232168969 UTC
+
+interface sim-0.1.0.0-JXAZcpkoPfLG6MndfiqTM4:Color 8063
+  interface hash: b849a8ff0a174c9b6111fa1e19647dde
+  ABI hash: 19e2ccadd8b1863a6920f106557a8d78
+  export-list hash: 5f706b428cfe62bcfe050440a36360da
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: d59a86fc39dabe8754ebbfb830e37f1e
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Color.clr
+  Color.Color{Color.Black Color.Blue Color.Bold Color.Cyan Color.Default Color.Dim Color.Green Color.Italic Color.Magenta Color.Red Color.Reset Color.Reverse Color.Strike Color.Underline Color.White Color.Yellow}
+module dependencies:
+package dependencies: base-4.12.0.0* ghc-prim-0.5.3
+                      integer-gmp-1.0.2.0
+orphans: base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity base-4.12.0.0:Data.Monoid
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:GHC.Generics
+                         base-4.12.0.0:GHC.IO.Exception
+import  -/  base-4.12.0.0:GHC.Base cc906f98291a1b830546e99a96674547
+import  -/  base-4.12.0.0:GHC.Show 4e438f26d903388cc6c2c5d64ed01b98
+import  -/  base-4.12.0.0:Prelude 5c01365ec01f83bd405ac01cbb9a8d76
+0d8d05d2a94bf2c871e704d15c72fd40
+  $fShowColor :: GHC.Show.Show Color.Color
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Color.Color
+                  Color.$fShowColor_$cshowsPrec
+                  Color.$fShowColor_$cshow
+                  Color.$fShowColor_$cshowList -}
+0d8d05d2a94bf2c871e704d15c72fd40
+  $fShowColor1 :: Color.Color -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <L,1*U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Color.Color) (s :: GHC.Base.String)[OneShot] ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b
+                      c
+                      n
+                      (Color.$fShowColor_$cshow x))
+                   s) -}
+41eab347a2607cfd2e335903eeaed285
+  $fShowColor2 :: GHC.Prim.Int# -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <S,U>m2,
+     Unfolding: (\ (ww3 :: GHC.Prim.Int#)[OneShot] ->
+                 case GHC.Show.$wshowSignedInt
+                        0#
+                        ww3
+                        (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                 GHC.Base.++_$s++ @ GHC.Types.Char Color.$fShowColor3 ww5 ww6 }) -}
+931284f0d7b66a481780ca61adf5dbfa
+  $fShowColor3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Color.$fShowColor4) -}
+78ac03009df1758bc3efee0d8cc5eaea
+  $fShowColor4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("m"#) -}
+476d190e83bdeffbe7575f43a4e2e409
+  $fShowColor5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("\ESC["#) -}
+0d8d05d2a94bf2c871e704d15c72fd40
+  $fShowColor_$cshow :: Color.Color -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (c :: Color.Color) ->
+                 GHC.CString.unpackAppendCString#
+                   Color.$fShowColor5
+                   (case c of wild {
+                      Color.Reset -> Color.$fShowColor2 0#
+                      Color.Default -> Color.$fShowColor2 10#
+                      Color.Black -> Color.$fShowColor2 30#
+                      Color.Red -> Color.$fShowColor2 31#
+                      Color.Green -> Color.$fShowColor2 32#
+                      Color.Yellow -> Color.$fShowColor2 33#
+                      Color.Blue -> Color.$fShowColor2 34#
+                      Color.Magenta -> Color.$fShowColor2 35#
+                      Color.Cyan -> Color.$fShowColor2 36#
+                      Color.White -> Color.$fShowColor2 37#
+                      Color.Bold -> Color.$fShowColor2 1#
+                      Color.Dim -> Color.$fShowColor2 2#
+                      Color.Italic -> Color.$fShowColor2 3#
+                      Color.Strike -> Color.$fShowColor2 9#
+                      Color.Underline -> Color.$fShowColor2 4#
+                      Color.Reverse -> Color.$fShowColor2 7# })) -}
+0d8d05d2a94bf2c871e704d15c72fd40
+  $fShowColor_$cshowList :: [Color.Color] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Color.Color]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Color.Color Color.$fShowColor1 ls s) -}
+0d8d05d2a94bf2c871e704d15c72fd40
+  $fShowColor_$cshowsPrec ::
+    GHC.Types.Int -> Color.Color -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><L,1*U><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (ds :: GHC.Types.Int)
+                   (x :: Color.Color)
+                   (s :: GHC.Base.String) ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b
+                      c
+                      n
+                      (Color.$fShowColor_$cshow x))
+                   s) -}
+74c6c78b7da80ea0c804679037fd754c
+  $tc'Black :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7403514732953711250##
+                   1616187134782448193##
+                   Color.$trModule
+                   Color.$tc'Black2
+                   0#
+                   Color.$tc'Black1) -}
+1fe2872eeb68b5bf4f772ecedb6a7581
+  $tc'Black1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+eb9a2f939b76300a407bbf9fea6a5ab3
+  $tc'Black2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Color.$tc'Black3) -}
+a0e85de94fd37f0cb8c82d778fbace3e
+  $tc'Black3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Black"#) -}
+b0ead58edeb4ac9af5d00e5994610550
+  $tc'Blue :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1415960765483048577##
+                   2582180749078163215##
+                   Color.$trModule
+                   Color.$tc'Blue1
+                   0#
+                   Color.$tc'Black1) -}
+8baa838f42e1a0ca06c6a8b6ed8cf0a8
+  $tc'Blue1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Color.$tc'Blue2) -}
+ea336c141051408cafdcf9e84c12a9dc
+  $tc'Blue2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Blue"#) -}
+828584a59cf99687a8e69ed84d0e62d0
+  $tc'Bold :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4806948216582206##
+                   13392500897361978869##
+                   Color.$trModule
+                   Color.$tc'Bold1
+                   0#
+                   Color.$tc'Black1) -}
+3cd2948fd943efe95fe7b18819dcf6f7
+  $tc'Bold1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Color.$tc'Bold2) -}
+ab68ee34535f2ea0daf7b3372a5b3cb9
+  $tc'Bold2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Bold"#) -}
+58c3a4d22168482a489ab17a7bd1f1b8
+  $tc'Cyan :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1888806905280178463##
+                   17796992520836632054##
+                   Color.$trModule
+                   Color.$tc'Cyan1
+                   0#
+                   Color.$tc'Black1) -}
+bc0f0f46ae9a3abb0870931627d40596
+  $tc'Cyan1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Color.$tc'Cyan2) -}
+eea02a608a24201d6ae926b39e387d23
+  $tc'Cyan2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Cyan"#) -}
+a2fe4346ec5a04fa8736a401ae2c332e
+  $tc'Default :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   793178771033725086##
+                   15083348180188159878##
+                   Color.$trModule
+                   Color.$tc'Default1
+                   0#
+                   Color.$tc'Black1) -}
+82df7cfc773cfaf472196fcc840f3abf
+  $tc'Default1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Color.$tc'Default2) -}
+7a9aecae961eef867d20c56dd077fc52
+  $tc'Default2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Default"#) -}
+f53a5ab57f90e033e4ab022c650c56e3
+  $tc'Dim :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   911361537066498197##
+                   3119609491673858612##
+                   Color.$trModule
+                   Color.$tc'Dim1
+                   0#
+                   Color.$tc'Black1) -}
+bebf55ce90a42f996270cd95b2b45a61
+  $tc'Dim1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Color.$tc'Dim2) -}
+78ccdc2dcd4c3867517876732d5a5777
+  $tc'Dim2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Dim"#) -}
+134a4efa8dbab9a3eed8e0200562bd81
+  $tc'Green :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18015593175451952026##
+                   1769166593797274780##
+                   Color.$trModule
+                   Color.$tc'Green1
+                   0#
+                   Color.$tc'Black1) -}
+b6d06c94f7ae570720a2f1fd0a212218
+  $tc'Green1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Color.$tc'Green2) -}
+95611fa27c07ba35eb44e004e30486d0
+  $tc'Green2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Green"#) -}
+b21a3de3324a03267429b68277ebbcfb
+  $tc'Italic :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5540314255133680929##
+                   9737222298989609166##
+                   Color.$trModule
+                   Color.$tc'Italic1
+                   0#
+                   Color.$tc'Black1) -}
+801d29a6290affb057e72ea376b4eb78
+  $tc'Italic1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Color.$tc'Italic2) -}
+88817e0363fdcf298eaa44efa9533a16
+  $tc'Italic2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Italic"#) -}
+4dc5622aa37866c144f87291ab0a4363
+  $tc'Magenta :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   525337269486903452##
+                   311047884728896806##
+                   Color.$trModule
+                   Color.$tc'Magenta1
+                   0#
+                   Color.$tc'Black1) -}
+d283895ce522a882a52d78f060062a7a
+  $tc'Magenta1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Color.$tc'Magenta2) -}
+175b929c15fb3c8c41955692aa3b8433
+  $tc'Magenta2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Magenta"#) -}
+70b6861dc0c3c777b110abd0dcc03516
+  $tc'Red :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7170319249712569936##
+                   258213938166658305##
+                   Color.$trModule
+                   Color.$tc'Red1
+                   0#
+                   Color.$tc'Black1) -}
+89ae10bc2d99f2a0bf04e4c61c93e58a
+  $tc'Red1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Color.$tc'Red2) -}
+c37d1466a3fea3da1af570b1a812029a
+  $tc'Red2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Red"#) -}
+98bca3ac76330043916f63f26f254acd
+  $tc'Reset :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12169674416085743760##
+                   18378989735763654570##
+                   Color.$trModule
+                   Color.$tc'Reset1
+                   0#
+                   Color.$tc'Black1) -}
+6ada2f49c88c5a546048ed4c543fa126
+  $tc'Reset1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Color.$tc'Reset2) -}
+7696dd171f7fa40ecebae116100216cd
+  $tc'Reset2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Reset"#) -}
+d1c9cad73678394692e9941d1615e8b1
+  $tc'Reverse :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6114817355448369970##
+                   5016276586731278207##
+                   Color.$trModule
+                   Color.$tc'Reverse1
+                   0#
+                   Color.$tc'Black1) -}
+1ac9ca25a536cf6c4f7d97d503cb99e2
+  $tc'Reverse1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Color.$tc'Reverse2) -}
+89179d9ed7c54a7fd5edd352fd6cb2d1
+  $tc'Reverse2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Reverse"#) -}
+9edbe09d63794bbcae4a7f5650f7a1ba
+  $tc'Strike :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9509001002663501285##
+                   4175057304570434404##
+                   Color.$trModule
+                   Color.$tc'Strike1
+                   0#
+                   Color.$tc'Black1) -}
+2a73192cdc1f2aa26f72a1bb132b4062
+  $tc'Strike1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Color.$tc'Strike2) -}
+b5e7f3562ef000c2b798a477d43941a6
+  $tc'Strike2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Strike"#) -}
+627b2cc8e26486217f0ffb03cc5af9b7
+  $tc'Underline :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1271570553718824550##
+                   10125474234982730124##
+                   Color.$trModule
+                   Color.$tc'Underline1
+                   0#
+                   Color.$tc'Black1) -}
+c97320d003eee27fa7535e4a55c4ece6
+  $tc'Underline1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Color.$tc'Underline2) -}
+b14ae72b498c0acd5e9475cf57f6078e
+  $tc'Underline2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Underline"#) -}
+552878487daf6589cb4724b3979dfe85
+  $tc'White :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1367692205607329412##
+                   1620734165125043476##
+                   Color.$trModule
+                   Color.$tc'White1
+                   0#
+                   Color.$tc'Black1) -}
+927faa16d6a09d8cfee92059174279d0
+  $tc'White1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Color.$tc'White2) -}
+d6b509a4b4e52af7871936b90d889db1
+  $tc'White2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'White"#) -}
+e36b83e3feb196546319e93fd4422aeb
+  $tc'Yellow :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2342373490845066931##
+                   13696782893764912097##
+                   Color.$trModule
+                   Color.$tc'Yellow1
+                   0#
+                   Color.$tc'Black1) -}
+e1d890e4d2946ab9982939362fd46ec3
+  $tc'Yellow1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Color.$tc'Yellow2) -}
+d307ff6d5188c02cdb0694f11e8ef960
+  $tc'Yellow2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Yellow"#) -}
+43d343dbe9e9f87710a503f6eabea579
+  $tcColor :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13311697774112845903##
+                   8267481181750983239##
+                   Color.$trModule
+                   Color.$trModule1
+                   0#
+                   GHC.Types.krep$*) -}
+5dd51be03fb3b5da9aef6b2a8df8b0c7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Color.$trModule3 Color.$trModule1) -}
+74df279e3f15373d14e41c49f0564a2b
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Color.$trModule2) -}
+486dc35091f3990ea9a64ac206add389
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Color"#) -}
+74bc8299cceaef3124e58f49d8622e1c
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Color.$trModule4) -}
+4ac218a2e352c7e7b0f63430bc48f501
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("sim-0.1.0.0-JXAZcpkoPfLG6MndfiqTM4"#) -}
+0d8d05d2a94bf2c871e704d15c72fd40
+  data Color
+    = Reset
+    | Default
+    | Black
+    | Red
+    | Green
+    | Yellow
+    | Blue
+    | Magenta
+    | Cyan
+    | White
+    | Bold
+    | Dim
+    | Italic
+    | Strike
+    | Underline
+    | Reverse
+dd5f3d0d914eff32b0bbd2004c1743ad
+  type ColorStr = Color.Color -> GHC.Base.String -> GHC.Base.String
+4785e95052a70d343b92a21fa9c1acfb
+  clr :: Color.ColorStr
+  {- Arity: 2, Strictness: <L,1*U><L,1*U>,
+     Unfolding: (\ (c :: Color.Color) (s :: GHC.Base.String) ->
+                 GHC.Base.++
+                   @ GHC.Types.Char
+                   (Color.$fShowColor_$cshow c)
+                   (GHC.Base.++ @ GHC.Types.Char s Color.clr1)) -}
+07b689b1587042ae19735c69115ea1bf
+  clr1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   Color.$fShowColor5
+                   Color.clr2) -}
+9dce753ee64cb6a5e39caca000748c3e
+  clr2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Color.clr3
+                   Color.$fShowColor3) -}
+7bc7d21463a226bc8aabed1ae549bdf7
+  clr3 :: GHC.Base.String
+  {- Unfolding: (case GHC.Show.$wshowSignedInt
+                        0#
+                        0#
+                        (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                 GHC.Types.: @ GHC.Types.Char ww5 ww6 }) -}
+instance [safe] GHC.Show.Show [Color.Color] = Color.$fShowColor
+trusted: safe
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

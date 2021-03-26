@@ -1,0 +1,1181 @@
+
+==================== FINAL INTERFACE ====================
+2019-04-23 17:03:29.227946387 UTC
+
+interface sim-0.1.0.0-JXAZcpkoPfLG6MndfiqTM4:Sim 8063
+  interface hash: 89268e2cf8a92fa9ef71efc0a75facfb
+  ABI hash: 0a021b3f4903eb2b2f40b603cd5cd974
+  export-list hash: 0d0a1edc53a4fcb35b4241c5f0160c06
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: d59a86fc39dabe8754ebbfb830e37f1e
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Sim.#
+  Sim.adjacent
+  Sim.adjacents
+  Sim.adjacents'
+  Sim.black
+  Sim.buffer
+  Sim.code
+  Sim.count
+  Sim.dimensions
+  Sim.dn
+  Sim.draw
+  Sim.fps
+  Sim.h
+  Sim.lf
+  Sim.load
+  Sim.navigate
+  Sim.next
+  Sim.pixel
+  Sim.pos
+  Sim.posx
+  Sim.posy
+  Sim.rt
+  Sim.run
+  Sim.s
+  Sim.scan
+  Sim.sop
+  Sim.up
+  Sim.w
+  Sim.white
+  Sim.Dir{Sim.E Sim.N Sim.NE Sim.NW Sim.S Sim.SE Sim.SW Sim.W}
+  Sim.Entity{Sim.Block Sim.Dart Sim.None}
+  Sim.Frame
+  Sim.Glyph
+  Sim.Position
+  Sim.Screen
+module dependencies: Color Zero
+package dependencies: JuicyPixels-3.3.3 array-0.5.3.0 base-4.12.0.0
+                      binary-0.8.6.0 bytestring-0.10.8.2 containers-0.6.0.1
+                      deepseq-1.4.4.0 directory-1.3.3.0 filepath-1.4.2.1 ghc-prim-0.5.3
+                      integer-gmp-1.0.2.0 mtl-2.2.2 primitive-0.6.4.0 time-1.8.0.2
+                      transformers-0.5.5.0 unix-2.7.2.2 vector-0.12.0.2 zlib-0.6.2
+orphans: time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian
+         binary-0.8.6.0:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         vector-0.12.0.2:Data.Vector.Unboxed
+         vector-0.12.0.2:Data.Vector.Fusion.Bundle
+         transformers-0.5.5.0:Control.Monad.Trans.Error
+         base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: JuicyPixels-3.3.3:Codec.Picture.Tga
+                         JuicyPixels-3.3.3:Codec.Picture.Tiff
+                         JuicyPixels-3.3.3:Codec.Picture.Types
+                         base-4.12.0.0:Control.Applicative base-4.12.0.0:Data.Complex
+                         base-4.12.0.0:Data.Functor.Compose base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+                         containers-0.6.0.1:Data.IntMap.Internal
+                         containers-0.6.0.1:Data.IntSet.Internal
+                         containers-0.6.0.1:Data.Map.Internal
+                         containers-0.6.0.1:Data.Sequence.Internal
+                         containers-0.6.0.1:Data.Set.Internal containers-0.6.0.1:Data.Tree
+                         primitive-0.6.4.0:Control.Monad.Primitive
+                         primitive-0.6.4.0:Data.Primitive.Array
+                         primitive-0.6.4.0:Data.Primitive.ByteArray
+                         primitive-0.6.4.0:Data.Primitive.PrimArray
+                         primitive-0.6.4.0:Data.Primitive.SmallArray
+                         primitive-0.6.4.0:Data.Primitive.UnliftedArray
+                         vector-0.12.0.2:Data.Vector vector-0.12.0.2:Data.Vector.Primitive
+                         vector-0.12.0.2:Data.Vector.Storable
+                         vector-0.12.0.2:Data.Vector.Unboxed
+                         vector-0.12.0.2:Data.Vector.Unboxed.Base
+                         zlib-0.6.2:Codec.Compression.Zlib.Stream
+import  -/  JuicyPixels-3.3.3:Codec.Picture 8522dfa09774125835f03d784865baeb
+import  -/  JuicyPixels-3.3.3:Codec.Picture.Types 4603569f2ec3bd9f95c6280c79391632
+import  -/  base-4.12.0.0:Data.Foldable 00188ddf89c975fee76bdfad479443c1
+import  -/  base-4.12.0.0:Data.List ce2c69da408fdc014383cede9e1f9adf
+import  -/  base-4.12.0.0:Data.Maybe 1e8e1362415df45376dffd98f8a47766
+import  -/  base-4.12.0.0:Data.Tuple c92a835d04b6c075a7031d4e28e53c71
+import  -/  base-4.12.0.0:GHC.Base cc906f98291a1b830546e99a96674547
+import  -/  base-4.12.0.0:GHC.Err 28d622b06927ca4c3b335ec5326c34b2
+import  -/  base-4.12.0.0:GHC.List 734a72beb76d276fb4a0ba2689a5711f
+import  -/  base-4.12.0.0:GHC.Num 847723f2584d989dac1eada133ac3fb8
+import  -/  base-4.12.0.0:GHC.Real f7dad82c1d43d80823865d3e6c6636e0
+import  -/  base-4.12.0.0:GHC.Show 4e438f26d903388cc6c2c5d64ed01b98
+import  -/  base-4.12.0.0:Prelude 5c01365ec01f83bd405ac01cbb9a8d76
+import  -/  base-4.12.0.0:System.Environment 2204870ad586be67c274aa49ce9ae53a
+import  -/  base-4.12.0.0:System.IO 88c2b1c4079c52d62ed362d4eb9a5302
+import  -/  directory-1.3.3.0:System.Directory 0f500eb353c86bec5fb4ae7b9d4e6507
+import  -/  ghc-prim-0.5.3:GHC.Classes e0d9c979f6368701f34fa421754d2cce
+import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
+import  -/  Color 19e2ccadd8b1863a6920f106557a8d78
+  exports: 5f706b428cfe62bcfe050440a36360da
+  Green 7f6137d0f6fe85966cb03d72552b2dac
+  White f26d58d19c67489e5e6255b7370839f4
+  clr 4785e95052a70d343b92a21fa9c1acfb
+import  -/  Zero 2c7db2306df30e69ccad321006a9954c
+  exports: de2c51b7d181cf3c9170c3bab24aa3b2
+9c5dfc0c87f6c75c1f0c943d7181b45a
+  (#) :: [a] -> GHC.Types.Int -> a
+  {- Arity: 2, Strictness: <S,1*U><S(S),1*U(U)>, Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a (w1 :: [a]) (w2 :: GHC.Types.Int) ->
+                 case w2 of ww { GHC.Types.I# ww1 -> Sim.$w# @ a w1 ww1 }) -}
+67837b5f849136f858d43f8ae6d67e25
+  #1 :: a
+  {- Strictness: x -}
+f2e85fcd5d427ac3b085c7422b5773b5
+  $fEqDir :: GHC.Classes.Eq Sim.Dir
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:. @ Sim.Dir Sim.$fEqDir_$c== Sim.$fEqDir_$c/= -}
+f2e85fcd5d427ac3b085c7422b5773b5
+  $fEqDir_$c/= :: Sim.Dir -> Sim.Dir -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: Sim.Dir) (y :: Sim.Dir) ->
+                 case x of wild {
+                   Sim.N
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True Sim.N -> GHC.Types.False }
+                   Sim.W
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True Sim.W -> GHC.Types.False }
+                   Sim.E
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True Sim.E -> GHC.Types.False }
+                   Sim.S
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True Sim.S -> GHC.Types.False }
+                   Sim.NW
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True Sim.NW -> GHC.Types.False }
+                   Sim.NE
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True Sim.NE -> GHC.Types.False }
+                   Sim.SW
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True Sim.SW -> GHC.Types.False }
+                   Sim.SE
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True Sim.SE -> GHC.Types.False } }) -}
+f2e85fcd5d427ac3b085c7422b5773b5
+  $fEqDir_$c== :: Sim.Dir -> Sim.Dir -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: Sim.Dir) (ds1 :: Sim.Dir) ->
+                 case ds of wild {
+                   Sim.N
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Sim.N -> GHC.Types.True }
+                   Sim.W
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Sim.W -> GHC.Types.True }
+                   Sim.E
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Sim.E -> GHC.Types.True }
+                   Sim.S
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Sim.S -> GHC.Types.True }
+                   Sim.NW
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Sim.NW -> GHC.Types.True }
+                   Sim.NE
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Sim.NE -> GHC.Types.True }
+                   Sim.SW
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Sim.SW -> GHC.Types.True }
+                   Sim.SE
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Sim.SE -> GHC.Types.True } }) -}
+dc05e64ca0096fdf6fb3232412d90cd1
+  $fEqEntity :: GHC.Classes.Eq Sim.Entity
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Sim.Entity Sim.$fEqEntity_$c== Sim.$fEqEntity_$c/= -}
+dc05e64ca0096fdf6fb3232412d90cd1
+  $fEqEntity_$c/= :: Sim.Entity -> Sim.Entity -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: Sim.Entity) (y :: Sim.Entity) ->
+                 case x of wild {
+                   Sim.None
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True Sim.None -> GHC.Types.False }
+                   Sim.Block
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True Sim.Block -> GHC.Types.False }
+                   Sim.Dart a1
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Sim.Dart b1
+                        -> case a1 of wild2 {
+                             Sim.N
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.True Sim.N -> GHC.Types.False }
+                             Sim.W
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.True Sim.W -> GHC.Types.False }
+                             Sim.E
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.True Sim.E -> GHC.Types.False }
+                             Sim.S
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.True Sim.S -> GHC.Types.False }
+                             Sim.NW
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.True Sim.NW -> GHC.Types.False }
+                             Sim.NE
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.True Sim.NE -> GHC.Types.False }
+                             Sim.SW
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.True Sim.SW -> GHC.Types.False }
+                             Sim.SE
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.True Sim.SE -> GHC.Types.False } } } }) -}
+dc05e64ca0096fdf6fb3232412d90cd1
+  $fEqEntity_$c== :: Sim.Entity -> Sim.Entity -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: Sim.Entity) (ds1 :: Sim.Entity) ->
+                 case ds of wild {
+                   Sim.None
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Sim.None -> GHC.Types.True }
+                   Sim.Block
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Sim.Block -> GHC.Types.True }
+                   Sim.Dart a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Sim.Dart b1 -> Sim.$fEqDir_$c== a1 b1 } }) -}
+f2e85fcd5d427ac3b085c7422b5773b5
+  $fShowDir :: GHC.Show.Show Sim.Dir
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Sim.Dir
+                  Sim.$fShowDir_$cshowsPrec
+                  Sim.$fShowDir_$cshow
+                  Sim.$fShowDir_$cshowList -}
+821e938e952a82ccd010146037ce5df0
+  $fShowDir1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Sim.$fShowDir2) -}
+6b25d01f70e5dfbddfe4a42d32fa15bb
+  $fShowDir10 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("S"#) -}
+6a6e3770c543bfae165a5e99c1d79f93
+  $fShowDir11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Sim.$fShowDir12) -}
+f73d7249082e96b795785390dcdd3e35
+  $fShowDir12 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("E"#) -}
+dda4a2f7f6650a40e4e65599f1bea19a
+  $fShowDir13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Sim.$fShowDir14) -}
+2ca687c9c4d21554dfd8b9af1ca058ae
+  $fShowDir14 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("W"#) -}
+12c0cc351505ccd628c9a7b6862a0d59
+  $fShowDir15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Sim.$fShowDir16) -}
+cad7386076ea5a5a3da96e66954f536c
+  $fShowDir16 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("N"#) -}
+b633a73e33a7608250ad6c5e9f96363a
+  $fShowDir2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("SE"#) -}
+199e836d14510a0f717e0f11d614548a
+  $fShowDir3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Sim.$fShowDir4) -}
+21a186dad81131b3c5af089b42974972
+  $fShowDir4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("SW"#) -}
+2591ebd1e53fe83fc297672ed90c0996
+  $fShowDir5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Sim.$fShowDir6) -}
+b4bb47d443fced818e260d1fd4bd3531
+  $fShowDir6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("NE"#) -}
+1d395b126679625b87731a6bf5dc5e9c
+  $fShowDir7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Sim.$fShowDir8) -}
+8781654346aee2e35739815397c2dc54
+  $fShowDir8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("NW"#) -}
+9aa159e1dc856d96326bc3651a5ff936
+  $fShowDir9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Sim.$fShowDir10) -}
+f2e85fcd5d427ac3b085c7422b5773b5
+  $fShowDir_$cshow :: Sim.Dir -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Sim.Dir) ->
+                 case x of wild {
+                   Sim.N -> Sim.$fShowDir15
+                   Sim.W -> Sim.$fShowDir13
+                   Sim.E -> Sim.$fShowDir11
+                   Sim.S -> Sim.$fShowDir9
+                   Sim.NW -> Sim.$fShowDir7
+                   Sim.NE -> Sim.$fShowDir5
+                   Sim.SW -> Sim.$fShowDir3
+                   Sim.SE -> Sim.$fShowDir1 }) -}
+f2e85fcd5d427ac3b085c7422b5773b5
+  $fShowDir_$cshowList :: [Sim.Dir] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Sim.Dir]) (s1 :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Sim.Dir Sim.$w$cshowsPrec ls s1) -}
+f2e85fcd5d427ac3b085c7422b5773b5
+  $fShowDir_$cshowsPrec :: GHC.Types.Int -> Sim.Dir -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: [2],
+     Unfolding: InlineRule (3, True, True)
+                (\ (w1 :: GHC.Types.Int) (w2 :: Sim.Dir) (w3 :: GHC.Base.String) ->
+                 Sim.$w$cshowsPrec w2 w3) -}
+dc05e64ca0096fdf6fb3232412d90cd1
+  $fShowEntity :: GHC.Show.Show Sim.Entity
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Sim.Entity
+                  Sim.$fShowEntity_$cshowsPrec
+                  Sim.$fShowEntity_$cshow
+                  Sim.$fShowEntity_$cshowList -}
+dc05e64ca0096fdf6fb3232412d90cd1
+  $fShowEntity1 :: Sim.Entity -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (Sim.$fShowEntity_$cshowsPrec Sim.$fShowEntity2) -}
+7e4cb2fd29caa54541c603f161fe7a85
+  $fShowEntity2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+7c7fa0527cd5be638ec2f4eb86d784d4
+  $fShowEntity3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Sim.$fShowEntity4) -}
+2478f4d7ab069a3799fc3d87687957ed
+  $fShowEntity4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Dart "#) -}
+b1d2852847eb0dd4e3c0aa590db110e9
+  $fShowEntity5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Sim.$fShowEntity6) -}
+58d24396ebf145c7e124d65ec896d3cb
+  $fShowEntity6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Block"#) -}
+5983109f0b89db6163cbec0b7da160bf
+  $fShowEntity7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Sim.$fShowEntity8) -}
+242f893556cb000ab4468f6e4bbb0456
+  $fShowEntity8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("None"#) -}
+dc05e64ca0096fdf6fb3232412d90cd1
+  $fShowEntity_$cshow :: Sim.Entity -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: Sim.Entity) ->
+                 case x of wild {
+                   Sim.None -> Sim.$fShowEntity7
+                   Sim.Block -> Sim.$fShowEntity5
+                   Sim.Dart b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        Sim.$fShowEntity3
+                        (Sim.$w$cshowsPrec b1 (GHC.Types.[] @ GHC.Types.Char)) }) -}
+dc05e64ca0096fdf6fb3232412d90cd1
+  $fShowEntity_$cshowList :: [Sim.Entity] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Sim.Entity]) (s1 :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Sim.Entity Sim.$fShowEntity1 ls s1) -}
+dc05e64ca0096fdf6fb3232412d90cd1
+  $fShowEntity_$cshowsPrec ::
+    GHC.Types.Int -> Sim.Entity -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,1*U(U)><S,1*U><L,U>,
+     Unfolding: (\ (ds :: GHC.Types.Int)
+                   (ds1 :: Sim.Entity)
+                   (eta :: GHC.Base.String) ->
+                 case ds1 of wild {
+                   Sim.None -> GHC.Base.++ @ GHC.Types.Char Sim.$fShowEntity7 eta
+                   Sim.Block -> GHC.Base.++ @ GHC.Types.Char Sim.$fShowEntity5 eta
+                   Sim.Dart b1
+                   -> case ds of wild1 { GHC.Types.I# x ->
+                      case GHC.Prim.>=# x 11# of lwild {
+                        DEFAULT
+                        -> GHC.Base.++
+                             @ GHC.Types.Char
+                             Sim.$fShowEntity3
+                             (Sim.$w$cshowsPrec b1 eta)
+                        1#
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Sim.$fShowEntity3
+                                (Sim.$w$cshowsPrec
+                                   b1
+                                   (GHC.Types.:
+                                      @ GHC.Types.Char
+                                      GHC.Show.$fShow(,)2
+                                      eta))) } } }) -}
+bd2f551eece635734ce4742d98a0f1d7
+  $tc'Block :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3415090231601488049##
+                   9977850313274145435##
+                   Sim.$trModule
+                   Sim.$tc'Block2
+                   0#
+                   Sim.$tc'Block1) -}
+da7fcaa29ff1fcf89b24192e12dcfd25
+  $tc'Block1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+b8d1b91a24c54d534777fca9089221e3
+  $tc'Block2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sim.$tc'Block3) -}
+2a3490ea46be2f5367f753fceb97da11
+  $tc'Block3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Block"#) -}
+d3df0f25cb16ca0b1040124bf4d50d2a
+  $tc'Dart :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2112350956998219926##
+                   9331215991442256542##
+                   Sim.$trModule
+                   Sim.$tc'Dart2
+                   0#
+                   Sim.$tc'Dart1) -}
+277699a51a8e733a8f1e4ddec8917255
+  $tc'Dart1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+99412e707eb858908e978d4de60b17ba
+  $tc'Dart2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sim.$tc'Dart3) -}
+a2192f799a3773567ea77bfb6561e9b4
+  $tc'Dart3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Dart"#) -}
+d668cb560c60ff611ea33e20aca3b2d6
+  $tc'E :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11692443312843363341##
+                   18214660254344218359##
+                   Sim.$trModule
+                   Sim.$tc'E2
+                   0#
+                   Sim.$tc'E1) -}
+01ec5474ae52ddfc7b945a9522d00fde
+  $tc'E1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+709828bf44362324979ea12dd2064feb
+  $tc'E2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sim.$tc'E3) -}
+43b20bc1699db93b048244f919b629be
+  $tc'E3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'E"#) -}
+af3269a221cd246bf73504ccfdc2a125
+  $tc'N :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5332537166033338272##
+                   3278480689730726260##
+                   Sim.$trModule
+                   Sim.$tc'N1
+                   0#
+                   Sim.$tc'E1) -}
+f99011dfced094e59b02b5ae41b0f57b
+  $tc'N1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sim.$tc'N2) -}
+7088251042f5485c44534dbb46d9c637
+  $tc'N2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'N"#) -}
+db44c582537979862835b6a8af388998
+  $tc'NE :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2496829317184065050##
+                   646561268515403796##
+                   Sim.$trModule
+                   Sim.$tc'NE1
+                   0#
+                   Sim.$tc'E1) -}
+e6d5d4f6ad84d26d16cfb35d5da5e32b
+  $tc'NE1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sim.$tc'NE2) -}
+4913e7bb9527574129f61034f14c7511
+  $tc'NE2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'NE"#) -}
+cff3aa5dfcd6166a3a42c0ba2a785506
+  $tc'NW :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14679181739430070020##
+                   16858922942475579753##
+                   Sim.$trModule
+                   Sim.$tc'NW1
+                   0#
+                   Sim.$tc'E1) -}
+9ac74f08d8408f95c8e226b53e7a8489
+  $tc'NW1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sim.$tc'NW2) -}
+8ea6ffa1fd237b04c2bd3d65dfb26c6e
+  $tc'NW2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'NW"#) -}
+6162d1e6d0a92719be232673c28cafa2
+  $tc'None :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5526157474279421229##
+                   882048052513458357##
+                   Sim.$trModule
+                   Sim.$tc'None1
+                   0#
+                   Sim.$tc'Block1) -}
+52e6c1c028b828d2403c879649ffcdd8
+  $tc'None1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sim.$tc'None2) -}
+5d9677b79b80342bb94095474585522b
+  $tc'None2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'None"#) -}
+b0a497e46d2811fdc53cad955c411d47
+  $tc'S :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7831708564443602569##
+                   10891643126466873242##
+                   Sim.$trModule
+                   Sim.$tc'S1
+                   0#
+                   Sim.$tc'E1) -}
+1cb63c9bf5a9a638b119c3a4681c0a92
+  $tc'S1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sim.$tc'S2) -}
+cd16317e5d1c4d7b635eda6944b15e97
+  $tc'S2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'S"#) -}
+cfd2ad55d5762a7973dadda2630fba81
+  $tc'SE :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7986434897245511354##
+                   15428253680296843977##
+                   Sim.$trModule
+                   Sim.$tc'SE1
+                   0#
+                   Sim.$tc'E1) -}
+1109f655cadf18a57abef5ec5c64c25c
+  $tc'SE1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sim.$tc'SE2) -}
+f7b2ce3b502f2d9f3e83f0176ca59537
+  $tc'SE2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'SE"#) -}
+80e6be5699ac3fdaf075fea19fbcf19e
+  $tc'SW :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17675987042839870504##
+                   12671078982186268378##
+                   Sim.$trModule
+                   Sim.$tc'SW1
+                   0#
+                   Sim.$tc'E1) -}
+dfac67c7af01b45baa72d70317e596bc
+  $tc'SW1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sim.$tc'SW2) -}
+f1be385de73e5243af29d18e98fbe19e
+  $tc'SW2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'SW"#) -}
+1423805feac9c9dbc41f480fdd55facf
+  $tc'W :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1102216172527177569##
+                   2506620482300108692##
+                   Sim.$trModule
+                   Sim.$tc'W1
+                   0#
+                   Sim.$tc'E1) -}
+d4cfc38a40a6fc996d8533296d87a99c
+  $tc'W1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sim.$tc'W2) -}
+0a9084a627bb86ff5c27cd2c3aa2ca35
+  $tc'W2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'W"#) -}
+2d98d4ec6f7659613464ae437a7ef833
+  $tcDir :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10920750739777698172##
+                   16690614304241528531##
+                   Sim.$trModule
+                   Sim.$tcDir1
+                   0#
+                   GHC.Types.krep$*) -}
+d68429717a91e6774bd86e65009bc84f
+  $tcDir1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sim.$tcDir2) -}
+d4db8897c73f12101d19d8dc6661fab9
+  $tcDir2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Dir"#) -}
+7d2ce3aaaa88c32adfeba7bb7d13b533
+  $tcEntity :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17785133598269351511##
+                   10903957123890981177##
+                   Sim.$trModule
+                   Sim.$tcEntity1
+                   0#
+                   GHC.Types.krep$*) -}
+47494eed24dd872a327f423149bae647
+  $tcEntity1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sim.$tcEntity2) -}
+72ad7ef6ef41bf6b9800ca20728e9de0
+  $tcEntity2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Entity"#) -}
+4632adb058c0277b7c721ccb7dd3c150
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Sim.$trModule3 Sim.$trModule1) -}
+5084dc981b757ad26e2d9f13019b0d97
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sim.$trModule2) -}
+533220fa49ae066db32d72c294ac9bf5
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Sim"#) -}
+19eb3d53b0b44dc8061f890681fdc815
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Sim.$trModule4) -}
+c3c1c7ea66b3b434d6ccedbb36ce7d7c
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("sim-0.1.0.0-JXAZcpkoPfLG6MndfiqTM4"#) -}
+1173d7067f821bd1a0f1b31494587ce9
+  $w# :: [a] -> GHC.Prim.Int# -> a
+  {- Arity: 2, Strictness: <S,1*U><S,U>, Inline: [2],
+     Unfolding: (\ @ a (w1 :: [a]) (ww :: GHC.Prim.Int#) ->
+                 case w1 of wild {
+                   [] -> Sim.#1 @ a
+                   : ipv ipv1
+                   -> let {
+                        $j :: a <join 0>
+                        = case GHC.Classes.modInt# ww 360000# of ww2 { DEFAULT ->
+                          GHC.List.$w!! @ a wild ww2 }
+                      } in
+                      case GHC.Prim.>=# ww 360000# of lwild {
+                        DEFAULT
+                        -> case GHC.Prim.<# ww 0# of lwild1 {
+                             DEFAULT -> GHC.List.$w!! @ a wild ww 1# -> $j }
+                        1# -> $j } }) -}
+f2e85fcd5d427ac3b085c7422b5773b5
+  $w$cshowsPrec :: Sim.Dir -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [2],
+     Unfolding: (\ (w1 :: Sim.Dir) (w2 :: GHC.Base.String) ->
+                 case w1 of wild {
+                   Sim.N -> GHC.Base.++ @ GHC.Types.Char Sim.$fShowDir15 w2
+                   Sim.W -> GHC.Base.++ @ GHC.Types.Char Sim.$fShowDir13 w2
+                   Sim.E -> GHC.Base.++ @ GHC.Types.Char Sim.$fShowDir11 w2
+                   Sim.S -> GHC.Base.++ @ GHC.Types.Char Sim.$fShowDir9 w2
+                   Sim.NW -> GHC.Base.++ @ GHC.Types.Char Sim.$fShowDir7 w2
+                   Sim.NE -> GHC.Base.++ @ GHC.Types.Char Sim.$fShowDir5 w2
+                   Sim.SW -> GHC.Base.++ @ GHC.Types.Char Sim.$fShowDir3 w2
+                   Sim.SE -> GHC.Base.++ @ GHC.Types.Char Sim.$fShowDir1 w2 }) -}
+70c0fccc9f92c9e4a052c9fddd115bfe
+  $wadjacent :: Sim.Dir -> Sim.Frame -> GHC.Prim.Int# -> Sim.Entity
+  {- Arity: 3, Strictness: <S,1*U><S,1*U><S,U>, Inline: [2] -}
+cda70568e25fd2199f48379ac34f86ce
+  $wadjacents ::
+    Sim.Frame -> GHC.Types.Int -> (# Sim.Entity, [Sim.Entity] #)
+  {- Arity: 2, Strictness: <L,U><L,U(U)>, Inline: [2],
+     Unfolding: (\ (w1 :: Sim.Frame) (w2 :: GHC.Types.Int) ->
+                 (# case w2 of ww { GHC.Types.I# ww1 ->
+                    Sim.$wadjacent Sim.N w1 ww1 },
+                    GHC.Types.:
+                      @ Sim.Entity
+                      (case w2 of ww { GHC.Types.I# ww1 -> Sim.$wadjacent Sim.W w1 ww1 })
+                      (GHC.Types.:
+                         @ Sim.Entity
+                         (case w2 of ww { GHC.Types.I# ww1 -> Sim.$wadjacent Sim.E w1 ww1 })
+                         (GHC.Types.:
+                            @ Sim.Entity
+                            (case w2 of ww { GHC.Types.I# ww1 -> Sim.$wadjacent Sim.S w1 ww1 })
+                            (GHC.Types.[] @ Sim.Entity))) #)) -}
+f150fc4fed47f42bc698fb35efa2d515
+  $wadjacents' ::
+    Sim.Frame -> GHC.Types.Int -> (# Sim.Entity, [Sim.Entity] #)
+  {- Arity: 2, Strictness: <L,U><L,U(U)>, Inline: [2],
+     Unfolding: (\ (w1 :: Sim.Frame) (w2 :: GHC.Types.Int) ->
+                 (# case w2 of ww { GHC.Types.I# ww1 ->
+                    Sim.$wadjacent Sim.N w1 ww1 },
+                    GHC.Types.:
+                      @ Sim.Entity
+                      (case w2 of ww { GHC.Types.I# ww1 -> Sim.$wadjacent Sim.W w1 ww1 })
+                      (GHC.Types.:
+                         @ Sim.Entity
+                         (case w2 of ww { GHC.Types.I# ww1 -> Sim.$wadjacent Sim.E w1 ww1 })
+                         (GHC.Types.:
+                            @ Sim.Entity
+                            (case w2 of ww { GHC.Types.I# ww1 -> Sim.$wadjacent Sim.S w1 ww1 })
+                            (GHC.Types.:
+                               @ Sim.Entity
+                               (case w2 of ww { GHC.Types.I# ww1 ->
+                                Sim.$wadjacent Sim.NW w1 ww1 })
+                               (GHC.Types.:
+                                  @ Sim.Entity
+                                  (case w2 of ww { GHC.Types.I# ww1 ->
+                                   Sim.$wadjacent Sim.NE w1 ww1 })
+                                  (GHC.Types.:
+                                     @ Sim.Entity
+                                     (case w2 of ww { GHC.Types.I# ww1 ->
+                                      Sim.$wadjacent Sim.SW w1 ww1 })
+                                     (GHC.Types.:
+                                        @ Sim.Entity
+                                        (case w2 of ww { GHC.Types.I# ww1 ->
+                                         Sim.$wadjacent Sim.SE w1 ww1 })
+                                        (GHC.Types.[] @ Sim.Entity))))))) #)) -}
+5a9ee3a9dd57f05a3f7e365c58039595
+  $wdn :: GHC.Prim.Int# -> GHC.Prim.Int#
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#) ->
+                 case GHC.Classes.modInt# ww 600# of ww2 { DEFAULT ->
+                 case GHC.Classes.divInt# ww 600# of ww4 { DEFAULT ->
+                 case GHC.Classes.modInt# ww4 600# of ww1 { DEFAULT ->
+                 case GHC.Classes.modInt# ww2 600# of ww3 { DEFAULT ->
+                 case GHC.Classes.modInt#
+                        (GHC.Prim.+# ww1 1#)
+                        600# of ww5 { DEFAULT ->
+                 GHC.Prim.+# ww3 (GHC.Prim.*# ww5 600#) } } } } }) -}
+cf1e778673cb758ea2b4fb1c9f852e05
+  $wgo :: [Sim.Entity] -> GHC.Prim.Int# -> GHC.Types.Int
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,U>m,
+     Inline: [2] -}
+3c7fb7f95e421e249dec98c390753978
+  $wlf :: GHC.Prim.Int# -> GHC.Prim.Int#
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#) ->
+                 case GHC.Classes.modInt# ww 600# of ww2 { DEFAULT ->
+                 case GHC.Classes.divInt# ww 600# of ww4 { DEFAULT ->
+                 case GHC.Classes.modInt# ww4 600# of ww1 { DEFAULT ->
+                 case GHC.Classes.modInt#
+                        (GHC.Prim.-# ww2 1#)
+                        600# of ww3 { DEFAULT ->
+                 case GHC.Classes.modInt# ww1 600# of ww5 { DEFAULT ->
+                 GHC.Prim.+# ww3 (GHC.Prim.*# ww5 600#) } } } } }) -}
+737f3b78fe9fe79d086b8caa59998338
+  $wrt :: GHC.Prim.Int# -> GHC.Prim.Int#
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#) ->
+                 case GHC.Classes.modInt# ww 600# of ww2 { DEFAULT ->
+                 case GHC.Classes.divInt# ww 600# of ww4 { DEFAULT ->
+                 case GHC.Classes.modInt# ww4 600# of ww1 { DEFAULT ->
+                 case GHC.Classes.modInt#
+                        (GHC.Prim.+# ww2 1#)
+                        600# of ww3 { DEFAULT ->
+                 case GHC.Classes.modInt# ww1 600# of ww5 { DEFAULT ->
+                 GHC.Prim.+# ww3 (GHC.Prim.*# ww5 600#) } } } } }) -}
+24a0bf0d99201f48026f1a0ea1847298
+  $wscan :: GHC.Prim.Char# -> Sim.Entity
+  {- Arity: 1, Strictness: <S,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Char#) ->
+                 letrec {
+                   go :: [(Sim.Entity, Sim.Glyph)] -> Sim.Entity
+                     <join 1> {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [(Sim.Entity, Sim.Glyph)]) ->
+                     case ds of wild {
+                       [] -> case Data.Maybe.fromJust1 ret_ty Sim.Entity of {}
+                       : y ys
+                       -> case y of wild1 { (,) ds1 y1 ->
+                          case y1 of wild2 { GHC.Types.C# x ->
+                          case GHC.Prim.eqChar# x ww of lwild {
+                            DEFAULT -> go ys 1# -> ds1 } } } }
+                 } in
+                 go Sim.code) -}
+ce722592029d6f789254ceae208d6633
+  $wup :: GHC.Prim.Int# -> GHC.Prim.Int#
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#) ->
+                 case GHC.Classes.modInt# ww 600# of ww2 { DEFAULT ->
+                 case GHC.Classes.divInt# ww 600# of ww4 { DEFAULT ->
+                 case GHC.Classes.modInt# ww4 600# of ww1 { DEFAULT ->
+                 case GHC.Classes.modInt# ww2 600# of ww3 { DEFAULT ->
+                 case GHC.Classes.modInt#
+                        (GHC.Prim.-# ww1 1#)
+                        600# of ww5 { DEFAULT ->
+                 GHC.Prim.+# ww3 (GHC.Prim.*# ww5 600#) } } } } }) -}
+f2e85fcd5d427ac3b085c7422b5773b5
+  data Dir = N | W | E | S | NW | NE | SW | SE
+dc05e64ca0096fdf6fb3232412d90cd1
+  data Entity = None | Block | Dart Sim.Dir
+617c7ee6601b883a7b4748b1e7d6c1d1
+  type Frame = [Sim.Entity]
+de13be3c405976b0ba117836cb5967f4
+  type Glyph = GHC.Types.Char
+e236764f68c1922018b0d2196be070b7
+  type Position = (GHC.Types.Int, GHC.Types.Int)
+1989b39c1c385593830780a2fc0d1d2c
+  type Screen = [Sim.Glyph]
+ef88cadd9ff0eac6b5d6f9721de902d3
+  adjacent :: Sim.Dir -> Sim.Frame -> GHC.Types.Int -> Sim.Entity
+  {- Arity: 3, Strictness: <S,1*U><S,1*U><S(S),1*U(U)>, Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w1 :: Sim.Dir) (w2 :: Sim.Frame) (w3 :: GHC.Types.Int) ->
+                 case w3 of ww { GHC.Types.I# ww1 -> Sim.$wadjacent w1 w2 ww1 }) -}
+5edd0cbfc533ab40b71a39a911b26665
+  adjacents :: Sim.Frame -> GHC.Types.Int -> [Sim.Entity]
+  {- Arity: 2, Strictness: <L,U><L,U(U)>m2, Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w1 :: Sim.Frame) (w2 :: GHC.Types.Int) ->
+                 case Sim.$wadjacents w1 w2 of ww { (#,#) ww1 ww2 ->
+                 GHC.Types.: @ Sim.Entity ww1 ww2 }) -}
+1ca8ba7eec7b285d623aeb66b791d1e4
+  adjacents' :: Sim.Frame -> GHC.Types.Int -> [Sim.Entity]
+  {- Arity: 2, Strictness: <L,U><L,U(U)>m2, Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w1 :: Sim.Frame) (w2 :: GHC.Types.Int) ->
+                 case Sim.$wadjacents' w1 w2 of ww { (#,#) ww1 ww2 ->
+                 GHC.Types.: @ Sim.Entity ww1 ww2 }) -}
+a2d390bb81815db011b0de06d039446d
+  black :: Codec.Picture.Types.Pixel8
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Word.W8# 0##) -}
+4c059861f2815ff99b652c53032ea113
+  buffer :: Sim.Frame -> [Sim.Frame]
+  {- Arity: 1, Strictness: <L,U>m2,
+     Unfolding: InlineRule (1, True, False)
+                (\ (w1 :: Sim.Frame) ->
+                 case GHC.List.$witerate
+                        @ Sim.Frame
+                        Sim.next
+                        w1 of ww { (#,#) ww1 ww2 ->
+                 GHC.Types.: @ Sim.Frame ww1 ww2 }) -}
+25933f8e5813aa783f3b5157f60fc50d
+  code :: [(Sim.Entity, Sim.Glyph)]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Sim.Entity, Sim.Glyph)
+                   Sim.code4
+                   Sim.code1) -}
+809f60f9065070ad49896e3bec7f3edf
+  code1 :: [(Sim.Entity, Sim.Glyph)]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Sim.Entity, Sim.Glyph)
+                   Sim.code2
+                   (GHC.Types.[] @ (Sim.Entity, Sim.Glyph))) -}
+e8539e3c2eb21f297c2580e535f3ee21
+  code2 :: (Sim.Entity, GHC.Types.Char)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Sim.Block, Sim.code3)) -}
+0d4408780539fef5054932f0496ae480
+  code3 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# 'x'#) -}
+6f9b5f35d385e250e1f9e295f454071f
+  code4 :: (Sim.Entity, GHC.Types.Char)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Sim.None, Sim.code5)) -}
+d96c48255cc4734ef386a61a55d45058
+  code5 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# '.'#) -}
+c38aae51337a37d1a1edca0ca5ac40a0
+  count :: GHC.Classes.Eq a => a -> [a] -> GHC.Types.Int
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U><S,1*U>m, Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a (w1 :: GHC.Classes.Eq a) (w2 :: a) (w3 :: [a]) ->
+                 letrec {
+                   $wgo1 :: [a] -> GHC.Prim.Int# -> GHC.Types.Int
+                     <join 2> {- Arity: 2, Strictness: <S,1*U><L,U>m, Inline: [2] -}
+                   = \ (w4 :: [a]) (ww :: GHC.Prim.Int#) ->
+                     case w4 of wild {
+                       [] -> GHC.Types.I# ww
+                       : y ys
+                       -> case GHC.Classes.== @ a w1 y w2 of wild1 {
+                            GHC.Types.False -> $wgo1 ys ww
+                            GHC.Types.True -> $wgo1 ys (GHC.Prim.+# ww 1#) } }
+                 } in
+                 $wgo1 w3 0#) -}
+95534483b321996ffc38d69c1e6a28dd
+  dimensions :: (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m, Unfolding: ((Sim.w, Sim.w)) -}
+253bbd31feef47e905216f6cad848909
+  dn :: GHC.Types.Int -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(U)>m, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w1 :: GHC.Types.Int) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 case Sim.$wdn ww1 of ww2 { DEFAULT -> GHC.Types.I# ww2 } }) -}
+dbc195e5d8742ca35be455bc7e68a2b4
+  draw :: [Sim.Frame] -> GHC.Types.Int -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <L,1*U><L,U(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Sim.draw1
+                  `cast`
+                (<[Sim.Frame]>_R
+                 ->_R <GHC.Types.Int>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+c73af9d5ea9e43acc90abab63458b46d
+  draw1 ::
+    [Sim.Frame]
+    -> GHC.Types.Int
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,1*U><L,U(U)><S,U> -}
+7cff2a23f13af3a362722e6885408056
+  fps :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
+c09cdfc32bdd3674b7452c5606cac54f
+  h :: GHC.Types.Int
+  {- Strictness: m, Unfolding: (Sim.w) -}
+178ebc8e06abbc8790f813aa9d5ed845
+  lf :: GHC.Types.Int -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(U)>m, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w1 :: GHC.Types.Int) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 case Sim.$wlf ww1 of ww2 { DEFAULT -> GHC.Types.I# ww2 } }) -}
+8644eff662ee656c1c32c645d5e4d7a2
+  load :: Sim.Screen -> Sim.Frame
+  {- Arity: 1,
+     Unfolding: (GHC.Base.map @ Sim.Glyph @ Sim.Entity Sim.scan) -}
+335a35a5fda578abf14e730b90e57052
+  navigate :: Sim.Dir -> Sim.Frame -> Sim.Frame
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: (\ (d :: Sim.Dir) (f :: Sim.Frame) ->
+                 letrec {
+                   go :: GHC.Prim.Int# -> [Sim.Entity]
+                     {- Arity: 1, Strictness: <L,U> -}
+                   = \ (x :: GHC.Prim.Int#) ->
+                     GHC.Types.:
+                       @ Sim.Entity
+                       (Sim.$wadjacent d f x)
+                       (case x of wild {
+                          DEFAULT -> go (GHC.Prim.+# wild 1#)
+                          9223372036854775807# -> GHC.Types.[] @ Sim.Entity })
+                 } in
+                 go 0#) -}
+3dff9811af35cb3a4cf2fc6ad7fbeb1a
+  next :: Sim.Frame -> Sim.Frame
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (f :: Sim.Frame) ->
+                 let {
+                   c :: GHC.Types.Int -> [Sim.Entity] -> [Sim.Entity]
+                     {- Arity: 2, Strictness: <L,1*U(U)><L,U> -}
+                   = \ (x :: GHC.Types.Int) (ys :: [Sim.Entity])[OneShot] ->
+                     GHC.Types.:
+                       @ Sim.Entity
+                       (case x of ww { GHC.Types.I# ww1 ->
+                        case GHC.List.$w!! @ Sim.Entity f ww1 of wild {
+                          DEFAULT
+                          -> case GHC.List.elem
+                                    @ GHC.Types.Int
+                                    GHC.Classes.$fEqInt
+                                    (case Sim.$wadjacents' f ww of ww2 { (#,#) ww3 ww4 ->
+                                     Sim.$wgo (GHC.Types.: @ Sim.Entity ww3 ww4) 0# })
+                                    Sim.next7 of wild1 {
+                               GHC.Types.False -> Sim.None GHC.Types.True -> Sim.Block }
+                          Sim.Block
+                          -> case GHC.List.elem
+                                    @ GHC.Types.Int
+                                    GHC.Classes.$fEqInt
+                                    (case Sim.$wadjacents' f ww of ww2 { (#,#) ww3 ww4 ->
+                                     Sim.$wgo (GHC.Types.: @ Sim.Entity ww3 ww4) 0# })
+                                    Sim.next1 of wild1 {
+                               GHC.Types.False -> Sim.None GHC.Types.True -> Sim.Block } } })
+                       ys
+                 } in
+                 letrec {
+                   $wgo1 :: GHC.Prim.Int# -> GHC.Prim.Int# -> [Sim.Entity]
+                     {- Arity: 2, Strictness: <L,U><S,1*U>, Inline: [2] -}
+                   = \ (w1 :: GHC.Prim.Int#) (ww :: GHC.Prim.Int#) ->
+                     case ww of ds1 {
+                       DEFAULT
+                       -> c (GHC.Types.I# w1)
+                            (case w1 of wild {
+                               DEFAULT -> $wgo1 (GHC.Prim.+# wild 1#) (GHC.Prim.-# ds1 1#)
+                               9223372036854775807# -> GHC.Types.[] @ Sim.Entity })
+                       1# -> c (GHC.Types.I# w1) (GHC.Types.[] @ Sim.Entity) }
+                 } in
+                 $wgo1 0# 360000#) -}
+8294e4f6303ca359557e513001eaaf1f
+  next1 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.: @ GHC.Types.Int Sim.next6 Sim.next2) -}
+26beeae262e7110d3179417a83bbc797
+  next2 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.: @ GHC.Types.Int Sim.next5 Sim.next3) -}
+a4c32be27aa76dcc436d64de15d32881
+  next3 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Sim.next4
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+905d78a13b8ca4deed3f3aa435c350cc
+  next4 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 5#) -}
+de38e26b05febf8c182fb91609adbb4f
+  next5 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 4#) -}
+c0afa656759ab27a087147fd96a5b1f5
+  next6 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3#) -}
+e3690bf8e18d759908aa203113475940
+  next7 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.: @ GHC.Types.Int Sim.next8 Sim.next1) -}
+ef849d46c2ae8bf0cbb19f70b7b13c28
+  next8 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
+fd83c26c12dd2373b8e2d435192556a9
+  pixel ::
+    Sim.Frame
+    -> GHC.Types.Int -> GHC.Types.Int -> Codec.Picture.Types.Pixel8
+  {- Arity: 3, Strictness: <S,1*U><S(S),1*U(U)><S(S),1*U(U)>m,
+     Unfolding: InlineRule (3, True, False)
+                (\ (f :: Sim.Frame) (x :: GHC.Types.Int) (y :: GHC.Types.Int) ->
+                 case x of wild { GHC.Types.I# x1 ->
+                 case y of wild1 { GHC.Types.I# x2 ->
+                 case GHC.List.$w!!
+                        @ Sim.Entity
+                        f
+                        (GHC.Prim.+# x1 (GHC.Prim.*# x2 600#)) of wild2 {
+                   DEFAULT -> Sim.white Sim.Block -> Sim.black } } }) -}
+d5e7ac15dc7abc8e1579cb76e55f9112
+  pos :: GHC.Types.Int -> Sim.Position
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (i :: GHC.Types.Int) -> (Sim.posx i, Sim.posy i)) -}
+0603a363bcc973093b8748fb3e784edb
+  posx :: GHC.Types.Int -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (i :: GHC.Types.Int) ->
+                 case i of wild1 { GHC.Types.I# x ->
+                 case GHC.Classes.modInt# x 600# of ww2 { DEFAULT ->
+                 GHC.Types.I# ww2 } }) -}
+8abd6bdbc99693dd85348ac88bf62b22
+  posy :: GHC.Types.Int -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(U)>m, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w1 :: GHC.Types.Int) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 case GHC.Classes.divInt# ww1 600# of ww4 { DEFAULT ->
+                 case GHC.Classes.modInt# ww4 600# of ww2 { DEFAULT ->
+                 GHC.Types.I# ww2 } } }) -}
+1298f6e18077196b336c4af6568cfd93
+  rt :: GHC.Types.Int -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(U)>m, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w1 :: GHC.Types.Int) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 case Sim.$wrt ww1 of ww2 { DEFAULT -> GHC.Types.I# ww2 } }) -}
+5a8f8360ff60f78955f49363d5e4b6f3
+  run :: Sim.Screen -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Sim.run1
+                  `cast`
+                (<Sim.Screen>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+61322ae6c6b18f649d5c9f38ad873efb
+  run1 ::
+    Sim.Screen
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,1*U><S,U>,
+     Unfolding: (\ (seed :: Sim.Screen)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 let {
+                   w1 :: [[Sim.Entity]]
+                   = case GHC.List.$witerate
+                            @ [Sim.Entity]
+                            Sim.next
+                            (GHC.Base.map
+                               @ GHC.Types.Char
+                               @ Sim.Entity
+                               Sim.scan
+                               seed) of ww { (#,#) ww1 ww2 ->
+                     GHC.Types.: @ [Sim.Entity] ww1 ww2 }
+                 } in
+                 letrec {
+                   go :: [GHC.Types.Int]
+                         -> GHC.Prim.State# GHC.Prim.RealWorld
+                         -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     <join 2> {- Arity: 2, Strictness: <S,1*U><S,U> -}
+                   = \ (ds :: [GHC.Types.Int])
+                       (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                     case ds of wild {
+                       [] -> (# eta1, GHC.Tuple.() #)
+                       : y ys
+                       -> case Sim.draw1 w1 y eta1 of ds1 { (#,#) ipv ipv1 ->
+                          go ys ipv } }
+                 } in
+                 go Sim.run2 eta) -}
+ec38b970a18e40c1cbcf40a807979cb5
+  run2 :: [GHC.Types.Int]
+  {- Unfolding: (GHC.Enum.eftInt 0# 9223372036854775807#) -}
+36803643834c379160a85d891944115f
+  s :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.I# 360000#) -}
+630d8e361582228e1bf6842a48f52611
+  scan :: Sim.Glyph -> Sim.Entity
+  {- Arity: 1, Strictness: <S(S),1*U(U)>, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w1 :: Sim.Glyph) ->
+                 case w1 of ww { GHC.Types.C# ww1 -> Sim.$wscan ww1 }) -}
+869bd90a8f88938c315bd3d42a3d9546
+  sop :: Sim.Position -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(S(S)S(S)),1*U(1*U(U),1*U(U))>m, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w1 :: Sim.Position) ->
+                 case w1 of ww { (,) ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 case ww2 of ww5 { GHC.Types.I# ww6 ->
+                 case GHC.Classes.modInt# ww4 600# of ww7 { DEFAULT ->
+                 case GHC.Classes.modInt# ww6 600# of ww8 { DEFAULT ->
+                 GHC.Types.I# (GHC.Prim.+# ww7 (GHC.Prim.*# ww8 600#)) } } } } }) -}
+ec0bd8e100ec91e38216ee6c14ae35aa
+  up :: GHC.Types.Int -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(U)>m, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w1 :: GHC.Types.Int) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 case Sim.$wup ww1 of ww2 { DEFAULT -> GHC.Types.I# ww2 } }) -}
+132cb944710ed3aafb037a618ce5e924
+  w :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 600#) -}
+6f3fde4ad54e7cbcd23c345052907d77
+  white :: Codec.Picture.Types.Pixel8
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Word.W8# 255##) -}
+instance GHC.Classes.Eq [Sim.Dir] = Sim.$fEqDir
+instance GHC.Classes.Eq [Sim.Entity] = Sim.$fEqEntity
+instance GHC.Show.Show [Sim.Dir] = Sim.$fShowDir
+instance GHC.Show.Show [Sim.Entity] = Sim.$fShowEntity
+trusted: none
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

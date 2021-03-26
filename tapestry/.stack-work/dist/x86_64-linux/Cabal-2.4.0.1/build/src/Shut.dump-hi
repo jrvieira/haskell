@@ -1,0 +1,331 @@
+
+==================== FINAL INTERFACE ====================
+2019-04-23 11:01:48.124579263 UTC
+
+interface sim-0.1.0.0-JXAZcpkoPfLG6MndfiqTM4:Shut 8063
+  interface hash: 4520cccdda709465ff25b2ec6105ff1f
+  ABI hash: 0e1e29aad0f2668ea924d22ea28dc441
+  export-list hash: 7d696de6fbb8839518340bb710ae30d9
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: d59a86fc39dabe8754ebbfb830e37f1e
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Shut.test
+  Shut.unit
+module dependencies: Color
+package dependencies: base-4.12.0.0* ghc-prim-0.5.3
+                      integer-gmp-1.0.2.0
+orphans: base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity base-4.12.0.0:Data.Monoid
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:GHC.Generics
+                         base-4.12.0.0:GHC.IO.Exception
+import  -/  base-4.12.0.0:Data.Foldable 00188ddf89c975fee76bdfad479443c1
+import  -/  base-4.12.0.0:Data.List ce2c69da408fdc014383cede9e1f9adf
+import  -/  base-4.12.0.0:Data.OldList c2cab40fed7d27b5e717779f9a3c09ea
+import  -/  base-4.12.0.0:GHC.Base cc906f98291a1b830546e99a96674547
+import  -/  base-4.12.0.0:GHC.IO.Exception 93698c4949c2bbf15fd7c864b5701916
+import  -/  base-4.12.0.0:GHC.List 734a72beb76d276fb4a0ba2689a5711f
+import  -/  base-4.12.0.0:GHC.Show 4e438f26d903388cc6c2c5d64ed01b98
+import  -/  base-4.12.0.0:Prelude 5c01365ec01f83bd405ac01cbb9a8d76
+import  -/  base-4.12.0.0:System.Exit 9bdfd82d04c0a0b8d920842d9c4e961d
+import  -/  base-4.12.0.0:System.IO 88c2b1c4079c52d62ed362d4eb9a5302
+import  -/  ghc-prim-0.5.3:GHC.Classes e0d9c979f6368701f34fa421754d2cce
+import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
+import  -/  Color 19e2ccadd8b1863a6920f106557a8d78
+  exports: 5f706b428cfe62bcfe050440a36360da
+  Dim ef9b99b006e6625c0cc62438ee4ffe9f
+  Green 7f6137d0f6fe85966cb03d72552b2dac
+  Red 24e3c8711c73233bba59c8b25b747598
+  clr 4785e95052a70d343b92a21fa9c1acfb
+975f5273afca001b0d964fb12f38122c
+  $fShowUnit :: GHC.Show.Show Shut.Unit
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Shut.Unit
+                  Shut.$fShowUnit_$cshowsPrec
+                  Shut.$fShowUnit_$cshow
+                  Shut.$fShowUnit_$cshowList -}
+9a3e0c35e2123ba296b419ee606efafc
+  $fShowUnit1 :: (GHC.Types.Char -> b -> b) -> b -> b
+  {- Arity: 2, Strictness: <L,C(C1(U))><L,U>,
+     Unfolding: (\ @ b
+                   (c :: GHC.Types.Char -> b -> b)[OneShot]
+                   (n :: b)[OneShot] ->
+                 let {
+                   z :: b
+                   = GHC.CString.unpackFoldrCString#
+                       @ b
+                       Shut.$fShowUnit3
+                       c
+                       (letrec {
+                          go2 :: [GHC.Types.Char] -> b {- Arity: 1, Strictness: <S,1*U> -}
+                          = \ (ds :: [GHC.Types.Char]) ->
+                            case ds of wild { [] -> n : y ys -> c y (go2 ys) }
+                        } in
+                        go2 Color.clr1)
+                 } in
+                 letrec {
+                   go2 :: [GHC.Types.Char] -> b {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [GHC.Types.Char]) ->
+                     case ds of wild { [] -> z : y ys -> c y (go2 ys) }
+                 } in
+                 go2
+                   (GHC.CString.unpackAppendCString#
+                      Color.$fShowColor5
+                      Shut.$fShowUnit2)) -}
+402dd410c1c334f4bb8f826a62dcf112
+  $fShowUnit2 :: [GHC.Types.Char]
+  {- Unfolding: (Color.$fShowColor2 32#) -}
+469d4e74a8eb9bc69b41f9e62e53c364
+  $fShowUnit3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("v "#) -}
+903e1238d2e15145769cd69dc787737b
+  $fShowUnit4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   Color.$fShowColor5
+                   Shut.$fShowUnit5) -}
+1e63e9d55c98ff46b8cbbf2f9d4db54f
+  $fShowUnit5 :: [GHC.Types.Char]
+  {- Unfolding: (Color.$fShowColor2 2#) -}
+ed125cdc3f1c35be10e3d96b65b20dba
+  $fShowUnit6 :: (GHC.Types.Char -> b -> b) -> b -> b
+  {- Arity: 2, Strictness: <L,C(C1(U))><L,U>,
+     Unfolding: (\ @ b
+                   (c :: GHC.Types.Char -> b -> b)[OneShot]
+                   (n :: b)[OneShot] ->
+                 let {
+                   z :: b
+                   = GHC.CString.unpackFoldrCString#
+                       @ b
+                       Shut.$fShowUnit8
+                       c
+                       (letrec {
+                          go2 :: [GHC.Types.Char] -> b {- Arity: 1, Strictness: <S,1*U> -}
+                          = \ (ds :: [GHC.Types.Char]) ->
+                            case ds of wild { [] -> n : y ys -> c y (go2 ys) }
+                        } in
+                        go2 Color.clr1)
+                 } in
+                 letrec {
+                   go2 :: [GHC.Types.Char] -> b {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [GHC.Types.Char]) ->
+                     case ds of wild { [] -> z : y ys -> c y (go2 ys) }
+                 } in
+                 go2
+                   (GHC.CString.unpackAppendCString#
+                      Color.$fShowColor5
+                      Shut.$fShowUnit7)) -}
+ae7ef03a58abaeea49a2641496b91b6b
+  $fShowUnit7 :: [GHC.Types.Char]
+  {- Unfolding: (Color.$fShowColor2 31#) -}
+271977bf7a25086a765af3e02efe89f8
+  $fShowUnit8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("x "#) -}
+975f5273afca001b0d964fb12f38122c
+  $fShowUnit_$cshow :: Shut.Unit -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: Shut.Unit) ->
+                 case ds of wild {
+                   Shut.Fail d ds1 ds2
+                   -> Shut.$fShowUnit6
+                        @ [GHC.Types.Char]
+                        (GHC.Types.: @ GHC.Types.Char)
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           Shut.$fShowUnit4
+                           (GHC.Base.++ @ GHC.Types.Char d Color.clr1))
+                   Shut.Pass d ds1
+                   -> Shut.$fShowUnit1
+                        @ [GHC.Types.Char]
+                        (GHC.Types.: @ GHC.Types.Char)
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           Shut.$fShowUnit4
+                           (GHC.Base.++ @ GHC.Types.Char d Color.clr1)) }) -}
+975f5273afca001b0d964fb12f38122c
+  $fShowUnit_$cshowList :: [Shut.Unit] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Shut.Unit]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Shut.Unit Shut.$w$cshowsPrec ls s) -}
+975f5273afca001b0d964fb12f38122c
+  $fShowUnit_$cshowsPrec ::
+    GHC.Types.Int -> Shut.Unit -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: [2],
+     Unfolding: InlineRule (3, True, True)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Shut.Unit)
+                   (w2 :: GHC.Base.String) ->
+                 Shut.$w$cshowsPrec w1 w2) -}
+7eacb5d1095e8dbcae4ab5575cd5da25
+  $tc'Fail :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10112118213947669513##
+                   3675608089333368137##
+                   Shut.$trModule
+                   Shut.$tc'Fail2
+                   0#
+                   Shut.$tc'Fail1) -}
+6e32c4136f68016247f432db7abb40e8
+  $tc'Fail1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+7a6d79687992a066f58f3d9d0c058b2e
+  $tc'Fail2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Shut.$tc'Fail3) -}
+1960dce8fd278a407193a604748bca0a
+  $tc'Fail3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Fail"#) -}
+0d114867eb4db0c4795dc04ae28e09d7
+  $tc'Pass :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5274591500891480147##
+                   12605834576697550565##
+                   Shut.$trModule
+                   Shut.$tc'Pass2
+                   0#
+                   Shut.$tc'Pass1) -}
+5cbe5d96f7c3b8d755bf369107f9d596
+  $tc'Pass1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+afeb72eb358515282c7af2f2d7126b35
+  $tc'Pass2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Shut.$tc'Pass3) -}
+deba6f4eb600e6db154d1fd6e8087aa5
+  $tc'Pass3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Pass"#) -}
+f4a3679862392b4935d1ab9cd9ee2c1d
+  $tcUnit :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   685849614932688982##
+                   6844678441633368924##
+                   Shut.$trModule
+                   Shut.$tcUnit1
+                   0#
+                   GHC.Types.krep$*) -}
+10d009f61c44a33b7b7be7c8b6e3d036
+  $tcUnit1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Shut.$tcUnit2) -}
+fb86a738a045a4a93c4eff8973833b40
+  $tcUnit2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Unit"#) -}
+48b276b188870df6e19b0194d7beb194
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Shut.$trModule3 Shut.$trModule1) -}
+4551bad8a03dcee765ac79a2375a9547
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Shut.$trModule2) -}
+388d79a1a834fabc55b615bc817fc770
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Shut"#) -}
+ae1d29869209969043f837d0e2a77ee5
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Shut.$trModule4) -}
+29e9352b1c2acc6eed6ac9a554735a4e
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("sim-0.1.0.0-JXAZcpkoPfLG6MndfiqTM4"#) -}
+975f5273afca001b0d964fb12f38122c
+  $w$cshowsPrec :: Shut.Unit -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [2],
+     Unfolding: (\ (w :: Shut.Unit) (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   Shut.Fail d ds ds1
+                   -> Shut.$fShowUnit6
+                        @ [GHC.Types.Char]
+                        (GHC.Types.: @ GHC.Types.Char)
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           Shut.$fShowUnit4
+                           (GHC.Base.++
+                              @ GHC.Types.Char
+                              d
+                              (GHC.Base.++ @ GHC.Types.Char Color.clr1 w1)))
+                   Shut.Pass d ds
+                   -> Shut.$fShowUnit1
+                        @ [GHC.Types.Char]
+                        (GHC.Types.: @ GHC.Types.Char)
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           Shut.$fShowUnit4
+                           (GHC.Base.++
+                              @ GHC.Types.Char
+                              d
+                              (GHC.Base.++ @ GHC.Types.Char Color.clr1 w1))) }) -}
+60f85eeb66ea8cbdb3d6298a90e9387c
+  $wunit ::
+    (a -> a -> GHC.Types.Bool)
+    -> GHC.Show.Show a => GHC.Base.String -> a -> a -> Shut.Unit
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <C(C(S)),1*C1(C1(U))><L,U(A,C(U),A)><L,U><L,U><L,U>,
+     Inline: [2],
+     Unfolding: (\ @ a
+                   (ww :: a -> a -> GHC.Types.Bool)
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Base.String)
+                   (w2 :: a)
+                   (w3 :: a) ->
+                 case ww w2 w3 of wild {
+                   GHC.Types.False -> Shut.Pass w1 (GHC.Show.show @ a w w2)
+                   GHC.Types.True
+                   -> Shut.Fail
+                        w1
+                        (GHC.Show.show @ a w w2)
+                        (GHC.Show.show @ a w w3) }) -}
+975f5273afca001b0d964fb12f38122c
+  data Unit
+    = Fail GHC.Base.String GHC.Base.String GHC.Base.String
+    | Pass GHC.Base.String GHC.Base.String
+2cd6e6833f8ea31997edfe2dad53cb62
+  test :: [Shut.Unit] -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Shut.test1
+                  `cast`
+                (<[Shut.Unit]>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+455e210e10032863d0c461fb758f16a6
+  test1 ::
+    [Shut.Unit]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,U><S,U> -}
+42730f72b5bc96e0f97d7cec6dea4f22
+  unit ::
+    (GHC.Classes.Eq a, GHC.Show.Show a) =>
+    GHC.Base.String -> a -> a -> Shut.Unit
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <S(LC(C(S))),1*U(A,1*C1(C1(U)))><L,U(A,C(U),A)><L,U><L,U><L,U>,
+     Inline: [2],
+     Unfolding: InlineRule (5, True, False)
+                (\ @ a
+                   (w :: GHC.Classes.Eq a)
+                   (w1 :: GHC.Show.Show a)
+                   (w2 :: GHC.Base.String)
+                   (w3 :: a)
+                   (w4 :: a) ->
+                 case w of ww { GHC.Classes.C:Eq ww1 ww2 ->
+                 Shut.$wunit @ a ww2 w1 w2 w3 w4 }) -}
+instance [safe] GHC.Show.Show [Shut.Unit] = Shut.$fShowUnit
+trusted: safe
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

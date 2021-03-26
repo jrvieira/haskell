@@ -1,0 +1,76 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: e4ffb0eb78de4027e3152090f2325fd00732f9a7f2fd343939f46150182dea91
+
+name:           sim
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/jrvieira/sim#readme>
+homepage:       https://github.com/jrvieira/sim#readme
+bug-reports:    https://github.com/jrvieira/sim/issues
+author:         jrvieira
+maintainer:     github.jrvieira.com
+copyright:      jrvieira
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/jrvieira/sim
+
+library
+  exposed-modules:
+      Color
+      Shut
+      Sim
+      Zero
+  other-modules:
+      Paths_sim
+  hs-source-dirs:
+      src
+  build-depends:
+      ansi-terminal
+    , array
+    , base >=4.7 && <5
+    , split
+    , JuicyPixels
+    , directory
+  default-language: Haskell2010
+
+executable sim-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_sim
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      ansi-terminal
+    , array
+    , base >=4.7 && <5
+    , sim
+    , split
+  default-language: Haskell2010
+
+test-suite sim-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_sim
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      ansi-terminal
+    , array
+    , base >=4.7 && <5
+    , sim
+    , split
+  default-language: Haskell2010

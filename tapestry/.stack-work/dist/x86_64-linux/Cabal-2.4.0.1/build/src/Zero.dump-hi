@@ -1,0 +1,53 @@
+
+==================== FINAL INTERFACE ====================
+2019-04-23 14:42:13.251653286 UTC
+
+interface sim-0.1.0.0-JXAZcpkoPfLG6MndfiqTM4:Zero 8063
+  interface hash: 80edc8f8687864efcbac237c80d9396f
+  ABI hash: 2c7db2306df30e69ccad321006a9954c
+  export-list hash: de2c51b7d181cf3c9170c3bab24aa3b2
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: d59a86fc39dabe8754ebbfb830e37f1e
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+module dependencies:
+package dependencies: base-4.12.0.0* ghc-prim-0.5.3
+                      integer-gmp-1.0.2.0
+orphans: base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity base-4.12.0.0:Data.Monoid
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:GHC.Generics
+                         base-4.12.0.0:GHC.IO.Exception
+import  -/  base-4.12.0.0:Prelude 5c01365ec01f83bd405ac01cbb9a8d76
+1da6712d26e85ffb936ac322269c369b
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Zero.$trModule3 Zero.$trModule1) -}
+90ec7a5f174716fa54000df1ab8e17fa
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Zero.$trModule2) -}
+0b2f18fe0cd182a6bded6fd644ced925
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Zero"#) -}
+422e497c659b2fe32fef3950d6f4b4c7
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Zero.$trModule4) -}
+e13e0bd44eef30ddc5451f9e7d9d9df0
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("sim-0.1.0.0-JXAZcpkoPfLG6MndfiqTM4"#) -}
+trusted: safe
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+
