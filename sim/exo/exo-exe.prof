@@ -1,0 +1,75 @@
+	Wed Jan 30 02:09 2019 Time and Allocation Profiling Report  (Final)
+
+	   exo-exe +RTS -N -p -RTS
+
+	total time  =       58.96 secs   (117915 ticks @ 1000 us, 2 processors)
+	total alloc = 66,754,781,008 bytes  (excludes profiling overheads)
+
+COST CENTRE       MODULE                    SRC                                                %time %alloc
+
+mark              Exo                       src/Exo.hs:37:1-46                                  36.9   35.9
+run.play          Exo                       src/Exo.hs:(13,7)-(18,16)                           28.8    2.1
+screen            Exo                       src/Exo.hs:(21,1)-(31,31)                           17.0   30.9
+chunksOf          Data.List.Split.Internals src/Data/List/Split/Internals.hs:(514,1)-(517,49)   14.0   30.9
+chunksOf.splitter Data.List.Split.Internals src/Data/List/Split/Internals.hs:(516,3)-(517,49)    3.1    0.3
+
+
+                                                                                                                       individual      inherited
+COST CENTRE             MODULE                    SRC                                               no.     entries  %time %alloc   %time %alloc
+
+MAIN                    MAIN                      <built-in>                                        174          0    0.0    0.0   100.0  100.0
+ CAF                    GHC.Conc.Signal           <entire-module>                                   285          0    0.0    0.0     0.0    0.0
+ CAF                    GHC.IO.Encoding           <entire-module>                                   275          0    0.0    0.0     0.0    0.0
+ CAF                    GHC.IO.Encoding.Iconv     <entire-module>                                   273          0    0.0    0.0     0.0    0.0
+ CAF                    GHC.IO.Exception          <entire-module>                                   267          0    0.0    0.0     0.0    0.0
+ CAF                    GHC.IO.Handle.FD          <entire-module>                                   265          0    0.0    0.0     0.0    0.0
+ CAF                    GHC.IO.Handle.Text        <entire-module>                                   263          0    0.0    0.0     0.0    0.0
+ CAF                    GHC.TopHandler            <entire-module>                                   243          0    0.0    0.0     0.0    0.0
+ CAF                    GHC.Event.Thread          <entire-module>                                   226          0    0.0    0.0     0.0    0.0
+ CAF                    GHC.Event.Poll            <entire-module>                                   190          0    0.0    0.0     0.0    0.0
+ CAF:buffer             Exo                       src/Exo.hs:34:1-6                                 317          0    0.0    0.0    71.1   97.9
+  buffer                Exo                       src/Exo.hs:34:1-28                                352          1    0.0    0.0    71.1   97.9
+   screen               Exo                       src/Exo.hs:(21,1)-(31,31)                         356      10146   17.0   30.9    71.1   97.9
+    mark                Exo                       src/Exo.hs:37:1-46                                358      71022   36.9   35.9    36.9   35.9
+    rel                 Coord'                    src/Coord'.hs:(45,1)-(52,28)                      357      71022    0.0    0.0     0.1    0.0
+     lf                 Coord'                    src/Coord'.hs:39:1-32                             365      40584    0.0    0.0     0.0    0.0
+      posx              Coord'                    src/Coord'.hs:27:1-16                             367      40584    0.0    0.0     0.0    0.0
+      posy              Coord'                    src/Coord'.hs:30:1-32                             369      40584    0.0    0.0     0.0    0.0
+      sop               Coord'                    src/Coord'.hs:21:1-43                             366      40584    0.0    0.0     0.0    0.0
+     rt                 Coord'                    src/Coord'.hs:42:1-32                             372      40584    0.0    0.0     0.0    0.0
+      posx              Coord'                    src/Coord'.hs:27:1-16                             374      40584    0.0    0.0     0.0    0.0
+      posy              Coord'                    src/Coord'.hs:30:1-32                             375      40584    0.0    0.0     0.0    0.0
+      sop               Coord'                    src/Coord'.hs:21:1-43                             373      40584    0.0    0.0     0.0    0.0
+     dn                 Coord'                    src/Coord'.hs:36:1-32                             376      20292    0.0    0.0     0.0    0.0
+      posx              Coord'                    src/Coord'.hs:27:1-16                             378      20292    0.0    0.0     0.0    0.0
+      posy              Coord'                    src/Coord'.hs:30:1-32                             379      20292    0.0    0.0     0.0    0.0
+      sop               Coord'                    src/Coord'.hs:21:1-43                             377      20292    0.0    0.0     0.0    0.0
+     up                 Coord'                    src/Coord'.hs:33:1-32                             362      20292    0.0    0.0     0.0    0.0
+      posx              Coord'                    src/Coord'.hs:27:1-16                             364      20292    0.0    0.0     0.0    0.0
+      posy              Coord'                    src/Coord'.hs:30:1-32                             371      20292    0.0    0.0     0.0    0.0
+      sop               Coord'                    src/Coord'.hs:21:1-43                             363      20292    0.0    0.0     0.0    0.0
+    chunksOf            Data.List.Split.Internals src/Data/List/Split/Internals.hs:(514,1)-(517,49) 359      10146   14.0   30.9    17.2   31.1
+     build              Data.List.Split.Internals src/Data/List/Split/Internals.hs:499:1-18         360      10146    0.0    0.0     3.1    0.3
+      chunksOf.splitter Data.List.Split.Internals src/Data/List/Split/Internals.hs:(516,3)-(517,49) 361    1937832    3.1    0.3     3.1    0.3
+     chunksOf.splitter  Data.List.Split.Internals src/Data/List/Split/Internals.hs:(516,3)-(517,49) 385          0    0.0    0.0     0.0    0.0
+    screen.list         Exo                       src/Exo.hs:31:7-31                                380      10146    0.0    0.0     0.0    0.0
+ CAF:dn1                Coord'                    <no location info>                                313          0    0.0    0.0     0.0    0.0
+  posy                  Coord'                    src/Coord'.hs:30:1-32                             370          0    0.0    0.0     0.0    0.0
+ CAF:dn2                Coord'                    <no location info>                                314          0    0.0    0.0     0.0    0.0
+  sop                   Coord'                    src/Coord'.hs:21:1-43                             368          0    0.0    0.0     0.0    0.0
+ CAF:main1              Main                      <no location info>                                346          0    0.0    0.0     0.0    0.0
+  main                  Main                      app/Main.hs:6:1-10                                348          1    0.0    0.0     0.0    0.0
+ CAF:run1               Exo                       <no location info>                                318          0    0.0    0.0     0.0    0.0
+  run                   Exo                       src/Exo.hs:(11,1)-(18,16)                         349          1    0.0    0.0     0.0    0.0
+ CAF:run2               Exo                       <no location info>                                316          0    0.0    0.0     0.0    0.0
+  screen                Exo                       src/Exo.hs:(21,1)-(31,31)                         381          0    0.0    0.0     0.0    0.0
+   screen.list          Exo                       src/Exo.hs:31:7-31                                382          0    0.0    0.0     0.0    0.0
+ CAF:run_xs'            Exo                       <no location info>                                315          0    0.0    0.0     0.0    0.0
+  screen                Exo                       src/Exo.hs:(21,1)-(31,31)                         383          0    0.0    0.0     0.0    0.0
+   screen.list          Exo                       src/Exo.hs:31:7-31                                384          0    0.0    0.0     0.0    0.0
+ CAF:s                  Coord'                    src/Coord'.hs:9:1                                 312          0    0.0    0.0     0.0    0.0
+  s                     Coord'                    src/Coord'.hs:9:1-9                               353          1    0.0    0.0     0.0    0.0
+ CAF:w                  Coord'                    src/Coord'.hs:6:1                                 310          0    0.0    0.0     0.0    0.0
+  w                     Coord'                    src/Coord'.hs:6:1-7                               354          1    0.0    0.0     0.0    0.0
+ run                    Exo                       src/Exo.hs:(11,1)-(18,16)                         351          0    0.0    0.0    28.8    2.1
+  run.play              Exo                       src/Exo.hs:(13,7)-(18,16)                         355      10146   28.8    2.1    28.8    2.1

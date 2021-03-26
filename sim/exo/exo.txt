@@ -1,0 +1,32 @@
+012.. . . . . . . . . . . . . w
+ . . . . . . a b . . . . . . .
+. . . . . . c i d . . . . . . .
+ . . . . . . e f . . . . . . .
+. . . . . . . . . . . . . . . s
+
+s = w*h
+i(x,y) = x+(y*w)
+
+-- solve expr
+
+a = ((i - w) - x + mod (x - 1) w)
+b = ((i - w) - x + mod (x + 1) w)
+c = ((i - x + mod (x - 1) w) - x + mod (x - 1) w)
+d = ((i - x + mod (x + 1) w) - x + mod (x + 1) w)
+e = ((i + w) - x + mod (x - 1) w)
+f = ((i + w) - x + mod (x + 1) w)
+   where
+         x = mod i w
+         y = div i w
+
+
+
+a = i-w - x + (x-1 % w)
+b = i-w - x + (x+1 % w)
+c = i-x + (x-1 % w) - x + (x-1 % w)
+d = i-x + (x+1 % w) - x + (x+1 % w)
+e = i+w - x + (x-1 % w)
+f = i+w - x + (x+1 % w)
+   where
+      x = i % w
+      y = div i w
