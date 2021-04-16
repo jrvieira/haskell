@@ -1,7 +1,7 @@
 main :: IO ()
 main = do
-   print $ fn (co length (F (:"yz"))) 'x'
-   print $ fn (cn ((:"yx") <?> C (F length))) 'x'
+   print $ fn (co length (F (: "yz"))) 'x'
+   print $ fn (cn ((: "yx") <?> C (F length))) 'x'
    print $ fn (cn (filter (< 0) <?> C (F length))) [-1..7]
    -- predicate
    print $ p (filter (< 0) <?> P null) [-1..7]
