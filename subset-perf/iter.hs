@@ -1,7 +1,7 @@
 main :: IO ()
 main = print $ length (s [0..pred n]) == 2^n
    where
-   n = 21
+   n = 27
 
 s [] = [[]]
 s (x:xs) = ss x (s xs)
