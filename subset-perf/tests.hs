@@ -1,15 +1,18 @@
 -- SUBSETS performance test
 -- ghci: length $ sX [0..19]
+-- ubuntu vm on imac: length $ sX [0..20]
 
 -- naive
-s [] = [[]]
-s (x:xs) = map (x :) (s xs) ++ (s xs)
+s0 = s
+   where
+   s [] = [[]]
+   s (x:xs) = map (x :) (s xs) ++ (s xs)
 -- (15.03 secs, 893,439,844 bytes)
 -- (14.98 secs, 893,439,844 bytes)
 -- (14.93 secs, 893,439,844 bytes)
 
 -- memoized
-s0 = s
+s1 = s
    where
    s [] = [[]]
    s (x:xs) = map (x :) ss ++ ss
@@ -20,7 +23,7 @@ s0 = s
 -- (1.57 secs, 75,552,320 bytes)
 
 -- cummulative
-s1 = s
+s2 = s
    where
    s [] = [[]]
    s (x:xs) = ss x (s xs)
