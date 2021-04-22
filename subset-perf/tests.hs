@@ -32,7 +32,7 @@ s1 = s
 -- ~13 a
 -- ~13 s
 
--- iterative
+-- fused
 s2 = s
    where
    s [] = [[]]
