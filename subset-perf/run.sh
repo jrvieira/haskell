@@ -13,9 +13,9 @@ mv bench O2
 echo "Benchmarking..."
 touch bench.txt
 echo "BENCHMARK\n" > bench.txt
-echo "O0\n" >> bench.txt
+echo "O0\n" | tee -a bench.txt
 ./O0/bench --output bench-O0.html >> bench.txt
-echo "O1\n" >> bench.txt
+echo "O1\n" | tee -a bench.txt
 ./O1/bench --output bench-O1.html >> bench.txt
-echo "O2\n" >> bench.txt
+echo "O2\n" | tee -a bench.txt
 ./O2/bench --output bench-O2.html >> bench.txt
