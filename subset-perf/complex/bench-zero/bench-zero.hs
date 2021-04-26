@@ -8,7 +8,7 @@ main :: IO ()
 main = do
    results <- sequence $ flip bench ns <$> [naive,memo,fuse,monad,tomsmeding]
    print results
-   draw results
+   draw "graph" results
    where
    ns = [20..27]
 
