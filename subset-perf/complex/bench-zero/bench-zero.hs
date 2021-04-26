@@ -2,13 +2,15 @@
 
 import System.CPUTime
 import Control.Monad
+import Diagrams.Draw
 
 main :: IO ()
 main = do
    results <- sequence $ flip bench ns <$> [naive,memo,fuse,monad,tomsmeding]
    print results
+   draw results
    where
-   ns = [0..21]
+   ns = [20..27]
 
 bench f ns = mapM f' ns
    where

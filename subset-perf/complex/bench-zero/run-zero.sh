@@ -16,10 +16,13 @@ echo "BENCHMARK-zero (picoseconds, implementation dependent precision)" > bench-
 echo "\nO0\n" | tee -a bench-zero.txt
 ./O0/bench-zero >> bench-zero.txt
 rm -r O0
+mv graph.svg graph-O0.svg
 echo "\nO1\n" | tee -a bench-zero.txt
 ./O1/bench-zero >> bench-zero.txt
 rm -r O1
+mv graph.svg graph-O1.svg
 echo "\nO2\n" | tee -a bench-zero.txt
 ./O2/bench-zero >> bench-zero.txt
 rm -r O2
+mv graph.svg graph-O2.svg
 
