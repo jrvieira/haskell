@@ -7,9 +7,9 @@ sh run-zero.sh # runs bench-zero.hs 3 times with different optimization degrees 
 # manually inline data from bench-zero.txt in bench-zero-fromtxt.hs
 
 haskell bench-zero-fromtxt # produces 3 .svg that are scaled in relation to eachother:
-                           # o0.svg
-                           # o1.svg
-                           # o2.svg
+                           # O0.svg
+                           # O1.svg
+                           # O2.svg
 
 # we could automate the 2nd step making the .txt parseable by bench-zero-fromtxt and just run run-zero.sh
 # but my goal for today is complete

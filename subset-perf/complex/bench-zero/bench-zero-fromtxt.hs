@@ -6,9 +6,9 @@ o2 = [[91238691000,173409533000,328945388000,659826813000,1227888378000,19410208
 
 main :: IO ()
 main = do
-   draw "o0" $ concat $ reverse [[[mx,mx]],o0]
-   draw "o1" $ concat $ reverse [[[mx,mx]],o1]
-   draw "o2" $ concat $ reverse [[[mx,mx]],o2]
+   draw "O0" $ concat $ reverse [[[mx,mx]],o0]
+   draw "O1" $ concat $ reverse [[[mx,mx]],o1]
+   draw "O2" $ concat $ reverse [[[mx,mx]],o2]
    where
    mx = maximum $ concat $ concat [o0,o1,o2]
 
