@@ -15,7 +15,11 @@ touch bench-zero.txt
 echo "BENCHMARK-zero (picoseconds, implementation dependent precision)" > bench-zero.txt
 echo "\nO0\n" | tee -a bench-zero.txt
 ./O0/bench-zero >> bench-zero.txt
+rm -r O0
 echo "\nO1\n" | tee -a bench-zero.txt
 ./O1/bench-zero >> bench-zero.txt
+rm -r O1
 echo "\nO2\n" | tee -a bench-zero.txt
 ./O2/bench-zero >> bench-zero.txt
+rm -r O2
+

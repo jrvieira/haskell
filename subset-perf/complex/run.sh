@@ -15,7 +15,10 @@ touch bench.txt
 echo "BENCHMARK\n" > bench.txt
 echo "O0\n" | tee -a bench.txt
 ./O0/bench --output bench-O0.html >> bench.txt
+rm -r O0
 echo "O1\n" | tee -a bench.txt
 ./O1/bench --output bench-O1.html >> bench.txt
+rm -r O1
 echo "O2\n" | tee -a bench.txt
 ./O2/bench --output bench-O2.html >> bench.txt
+rm -r O2
