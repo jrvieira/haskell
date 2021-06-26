@@ -23,9 +23,9 @@ main = do
    let w = length $ wins game
    let t = length $ ties game
    let e = length $ ends game
-   print $ [w,t,e]
-   print $ w+t == e
--- print $ pick 67013 start
+-- print $ [w,t,e]
+-- print $ w+t == e
+   print $ pick 67013 start
 
 -- setup
 
@@ -146,3 +146,4 @@ over g
    | otherwise = Left ()
    where
    b = map snd $ toList $ β g
+
