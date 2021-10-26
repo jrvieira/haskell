@@ -1,0 +1,37 @@
+
+-- step until output or halt
+tick :: State -> Signal
+tick μ@(State m p _ o _)
+   | Op 4 _ <- op = Signal (output μ') μ' -- # "signal " ++ show (head $ output μ')
+   | Op 99 _ <- op = Result o μ -- # "HALT " ++ show (head o)
+   | otherwise = tick μ' 
+   where
+   n = m ? p
+   op = Op (mod n 100) (div n 100)
+   μ' = step op $ μ
+
+step :: Op -> State -> State
+step op μ@(State m p i _ r) 
+-- | False # show (op,o) = undefined
+   -- sum
+   | 1 <- c = μ { memory = set 3 (get 1 + get 2) , pointer = p + 4 }
+   -- mul
+   | 2 <- c = μ { memory = set 3 (get 1 * get 2) , pointer = p + 4 }
+   -- read (write in)
+   | 3 <- c = μ { memory = set 1 i , pointer = p + 2 } 
+   -- write out
+   | 4 <- c = μ { pointer = p + 2 , output = get 1 }
+   -- jump
+   | 5 <- c , get 1 /= 0 = μ { pointer = get 2 }
+   | 5 <- c = μ { pointer = p + 3 }
+   | 6 <- c , get 1 == 0 = μ { pointer = get 2 }
+   | 6 <- c = μ { pointer = p + 3 }
+   -- conditional insert
+   | 7 <- c = μ { memory = set 3 (toInteger . fromEnum $ get 1 < get 2) , pointer = p + 4 }
+   | 8 <- c = μ { memory = set 3 (toInteger . fromEnum $ get 1 == get 2) , pointer = p + 4 }
+   -- relative base adjustment
+   | 9 <- c = μ { relbase = get 1 + r , pointer = p + 2 } 
+   -- error
+   | otherwise = error $ "invalid instruction code: " ++ show c
+   where
+   ...

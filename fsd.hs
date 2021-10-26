@@ -6,6 +6,9 @@ main = mapM_ print $ take 900 fsd
 infix 0 #
 (#) = flip trace
 
+{- fly straight dammit -}
+-- Numberphile OEIS episode
+
 fsd :: [Int]
 fsd = 1 : go 1 1
  where

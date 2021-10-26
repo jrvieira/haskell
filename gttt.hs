@@ -1,12 +1,21 @@
 import Data.Maybe
 import Data.IntMap.Strict hiding (null,map,foldr)
 
+import Debug.Trace
+
+infix 0 #
+(#) = flip trace
+
 -- goblets tic tac toe
 
 {- QUESTION:
    is there always a play
    that guarantees a win?
+
+   HEURITICS:
+   [0]: dont cover own pieces
 -}
+
 
 main :: IO ()
 main = do
@@ -14,8 +23,9 @@ main = do
    let w = length $ wins game
    let t = length $ ties game
    let e = length $ ends game
-   print $ [w,t,e]
-   print $ w+t == e
+-- print $ [w,t,e]
+-- print $ w+t == e
+   print $ pick 67013 start
 
 -- setup
 
@@ -65,7 +75,7 @@ move p i (Γ t b h)
 tops :: Piece -> Maybe Piece -> Bool
 tops p m
    | Nothing <- m = True
-   | Just jp <- m = γ p > γ jp
+   | Just jp <- m = γ p > γ jp && κ p /= κ jp -- heuristic [0]: dont cover own pieces
 
 play :: Int -> Maybe Int
 play i
@@ -73,8 +83,6 @@ play i
    | otherwise = Nothing
    where
    i' = pred i
-
--- mechanics
 
 data Tree = Node State [Tree] | Over State (Maybe Color)
 
@@ -105,6 +113,18 @@ ties t = go t []
    go (Node _ ss) = flip (foldr go) ss
    go (Over s Nothing) = (s :)
    go _ = id
+
+-- pseudo-random game
+pick :: Int -> State -> [State]
+pick n s 
+   | Right _ <- over s' = s' : []
+   | otherwise = s' : pick n s'
+   where
+   s' = ss !! ix
+   ix = mod n (length ss)
+   ss = step s
+
+-- mechanics 
 
 step :: State -> [State]
 step s@(Γ t b h) = catMaybes [move (P g t) i s | g <- keys (h ! t) , i <- take 9 [0..]]

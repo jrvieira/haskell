@@ -1,4 +1,4 @@
-import Control.Paralle
+import Control.Parallel
 
 main :: IO ()
 main = do
