@@ -1,4 +1,4 @@
-module Hex where
+module Seis where
 
 import Zero.Zero
 import Data.Type
@@ -12,6 +12,6 @@ universe = Universe plane (Interface Superficial (Some 27) mempty)
 
 main :: IO Universe
 main = do
-   echo "hex" $ "interact"
+   echo "seis" $ "interact"
    step render universe
 

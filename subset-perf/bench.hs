@@ -7,8 +7,9 @@ main = defaultMain [
       bench "naive" $ whnf (length . s0) [0..n] ,
       bench "memo" $ whnf (length . s1) [0..n] ,
       bench "fuse" $ whnf (length . s2) [0..n] ,
-      bench "monad" $ whnf (length . s3) [0..n] ,
-      bench "tomsmeding" $ whnf (length . s4) [0..n]
+      bench "fuse2" $ whnf (length . s3) [0..n] ,
+      bench "monad" $ whnf (length . s4) [0..n] ,
+      bench "tomsmeding" $ whnf (length . s5) [0..n]
       ]
    ]
    where
@@ -37,11 +38,19 @@ s2 = subsets
       ss _ [] = []
       ss x (y:ys) = (x:y) : y : ss x ys
 
+-- fuse2
+s3 = subsets
+   where
+   subsets [] = []
+   subsets (x:xs) = [x] : foldr f [] (subsets xs)
+      where
+      f ys r = ys : (x : ys) : r
+
 -- monadic
-s3 = filterM (const [True, False])
+s4 = filterM (const [True, False])
 
 -- tomsmeding on irc
-s4 = subsets
+s5 = subsets
    where
    subsets = ss []
       where
