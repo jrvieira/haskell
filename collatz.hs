@@ -1,7 +1,6 @@
 dots :: Integer -> String
 dots 0 = ""
-dots 1 = "."
-dots n = dots (n-1) ++ "."
+dots n = '.' : dots (n-1)
 
 -- p
 
